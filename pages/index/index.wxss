@@ -39,6 +39,6 @@ swiper{
 .pic image{
   margin-left: 0rpx;
   margin-top: 0rpx;
-  height: 115rpx;
-  width: 160rpx;
+  height: 125rpx;
+  width: 100%;
 }
