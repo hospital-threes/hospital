@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/hdynamicszi/hdynamicszi",
+    "pages/hintroduce/hintroduce",
     "pages/hdynamics/hdynamics",
+    "pages/hdynamicszi/hdynamicszi",
     "pages/index/index",
     "pages/logs/logs"
   ],
