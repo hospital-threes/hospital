@@ -7,4 +7,10 @@
 .luoc{
   padding: 20rpx;
   font-size: 25rpx;
+  word-wrap: break-word
+}
+.zitu image{
+  padding: 20rpx;
+  width: 705rpx;
+  height: 520rpx;
 }

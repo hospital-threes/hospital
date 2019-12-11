@@ -20,9 +20,8 @@ navigator{
   width: 70%; 
 }
 .dytu image{
-  
   width: 150rpx;
-  height: 100rpx;
+  height: 110rpx;
   
 }
 
