@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/hintroduce/hintroduce",
+    
     "pages/hdynamics/hdynamics",
+    "pages/hintroduce/hintroduce",
     "pages/hdynamicszi/hdynamicszi",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -12,7 +12,28 @@
     "navigationBarTitleText": "医院介绍",
     "navigationBarTextStyle": "black"
   },
-  
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/hdynamics/hdynamics",
+        "text": "主页",
+        "iconPath": "images/tab-home.png",
+        "selectedIconPath": "images/tab-home-current.png"
+      },
+      {
+        "pagePath": "pages/hintroduce/hintroduce",
+        "text": "分类",
+        "iconPath": "images/tab-cate.png",
+        "selectedIconPath": "images/tab-cate-current.png"
+      },
+      {
+        "pagePath": "pages/hdynamicszi/hdynamicszi",
+        "text": "我的",
+        "iconPath": "images/tab-my.png",
+        "selectedIconPath": "images/tab-my-current.png"
+      }
+    ]
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
