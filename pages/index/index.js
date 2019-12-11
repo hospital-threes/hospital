@@ -1,37 +1,25 @@
-//index.js
-const app = getApp()
-
 Page({
+
+  /**
+   * 页面的初始数据
+   */
   data: {
-    list: ''
-  },
-  // houduanRequest: function () {
-  //   var that = this;
-  //   wx.request({
-  //     url: 'http://localhost:8080/getUser',//自己请求的服务器的地址
-  //     method: 'post',
-  //     header: {
-  //       'content-type': 'application/json' // 默认值
-  //     },
-  //     success: function (req) {
-  //       var list = req.data;
-  //       if (list == null) {
-  //         wx.showToast({
-  //           title: 'ErrorMessage',
-  //           icon: 'false',   //图标
-  //           duration: 1500  //提示的延迟的时间
-  //         })
-  //       } else {
-  //         that.setData({
-  //           list: list
-  //         })
-  //       }
-  //     }
-  //   })
-  // },
+    imgUrls: [
+      './1.jpg',
+      './2.jpg',
+      './3.jpg'
+    ],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 3000,
+    duration: 1000
 
-  onLoad: function () {
-
+    // indicator-dots： 是否显示面板指示点，默认为false;
+    // autoplay：是否自动切换，默认为false;
+    // interval：自动切换时间间隔，默认5000ms;
+    // duration: 滑动动画时长，默认为1000ms;
   },
+
+
 
 })
