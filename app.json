@@ -1,9 +1,11 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/sintroduce/sintroduce",
     "pages/hdynamics/hdynamics",
+    "pages/index/index",
     "pages/hintroduce/hintroduce",
     "pages/hdynamicszi/hdynamicszi"
+   
     
   ],
   "window": {

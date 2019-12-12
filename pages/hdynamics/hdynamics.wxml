@@ -1,6 +1,4 @@
-<!--pages/hdynamics/hdynamics.wxml-->
-<!-- <text>pages/hdynamics/hdynamics.wxml</text> -->
-<!-- <block wx:for="{{list}}" wx:fot-item="list">
+<block wx:for="{{list}}" wx:fot-item="list">
   <view class="dyda">
     <navigator url="/pages/hdynamicszi/hdynamicszi">
       <view class="dytu">
@@ -11,9 +9,9 @@
       </view>
     </navigator>
   </view>
-</block> -->
+</block>
 
-<block >
+<!-- <block >
   <view class="dyda">
     <navigator url="/pages/hdynamicszi/hdynamicszi">
       <view class="dytu">
@@ -72,5 +70,5 @@
       </view>
     </navigator>
   </view>
-</block>
+</block> -->
 
