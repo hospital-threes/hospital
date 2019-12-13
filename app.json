@@ -1,12 +1,18 @@
 {
   "pages": [
-    "pages/sintroduce/sintroduce",
-    "pages/hdynamics/hdynamics",
     "pages/index/index",
-    "pages/hintroduce/hintroduce",
-    "pages/hdynamicszi/hdynamicszi"
-   
-    
+    "pages/online_registration/online_registration",
+    "pages/online_consultation/online_consultation",
+    "pages/h_report/h_report",
+    "pages/recharge_medical_card/recharge_medical_card",
+    "pages/outpatient_payment/outpatient_payment",
+    "pages/h_introduce/h_introduce",
+    "pages/h_dynamics/h_dynamics",
+    "pages/h_dynamics_zi/h_dynamics_zi",
+    "pages/s_introduce/s_introduce",
+    "pages/treatment_guide/treatment_guide", 
+    "pages/h_navigation/h_navigation", 
+    "pages/personal_center/personal_center"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,13 +29,13 @@
         "selectedIconPath": "images/tab-home-current.png"
       },
       {
-        "pagePath": "pages/hdynamics/hdynamics",
-        "text": "分类",
-        "iconPath": "images/tab-cate.png",
-        "selectedIconPath": "images/tab-cate-current.png"
+        "pagePath": "pages/h_dynamics/h_dynamics",
+        "text": "医院动态",
+        "iconPath": "images/tab-home.png",
+        "selectedIconPath": "images/tab-home-current.png"
       },
       {
-        "pagePath": "pages/hdynamicszi/hdynamicszi",
+        "pagePath": "pages/personal_center/personal_center",
         "text": "我的",
         "iconPath": "images/tab-my.png",
         "selectedIconPath": "images/tab-my-current.png"

@@ -1,0 +1,13 @@
+<block wx:for="{{list}}" wx:fot-item="list">
+  <view class="dyda">
+    <navigator url="/pages/hdynamicszi/hdynamicszi">
+      <view class="dytu">
+        <image src="../../images/1.png" mode="as"></image>
+      <view class="dyzi">
+        <text>{{list}}</text>
+      </view> 
+      </view>
+    </navigator>
+  </view>
+</block>
+
