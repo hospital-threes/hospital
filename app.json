@@ -12,7 +12,7 @@
     "pages/h_navigation/h_navigation", 
     
     "pages/h_dynamics/h_dynamics",
-    "pages/h_dynamics_zi/h_dynamics_zi",
+    "pages/h_dynamics/h_dynamics_zi/h_dynamics_zi",
     "pages/personal_center/personal_center"
   ],
   "window": {
