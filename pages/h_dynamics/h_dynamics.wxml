@@ -1,13 +1,74 @@
-<block wx:for="{{list}}" wx:fot-item="list">
+<block wx:for="{{list}}" wx:fot-item="item">
+
   <view class="dyda">
-    <navigator url="/pages/hdynamicszi/hdynamicszi">
+    <navigator url="/pages/hdynamicszi/hdynamicszi?id={{item.hospotal}}" open-type="navigate" class="uploader-text">
       <view class="dytu">
         <image src="../../images/1.png" mode="as"></image>
       <view class="dyzi">
-        <text>{{list}}</text>
+        <text>{{item.newTitle}}</text>
       </view> 
       </view>
     </navigator>
   </view>
 </block>
 
+<!-- <block >
+  <view class="dyda">
+    <navigator url="/pages/hdynamicszi/hdynamicszi">
+      <view class="dytu">
+        <image src="../../images/1.png" mode="as"></image>
+      <view class="dyzi">
+        <text>我院专科医师赴法参加临床研究培训</text>
+      </view> 
+      </view>
+    </navigator>
+  </view>
+</block>
+<block >
+  <view class="dyda">
+    <navigator url="/pages/hdynamicszi/hdynamicszi">
+      <view class="dytu">
+        <image src="../../images/1.png" mode="as"></image>
+      <view class="dyzi">
+        <text>我院专科医师赴法参加临床研究培训</text>
+      </view> 
+      </view>
+    </navigator>
+  </view>
+</block>
+<block >
+  <view class="dyda">
+    <navigator url="/pages/hdynamicszi/hdynamicszi">
+      <view class="dytu">
+        <image src="../../images/1.png" mode="as"></image>
+      <view class="dyzi">
+        <text>我院专科医师赴法参加临床研究培训</text>
+      </view> 
+      </view>
+    </navigator>
+  </view>
+</block>
+<block >
+  <view class="dyda">
+    <navigator url="/pages/hdynamicszi/hdynamicszi">
+      <view class="dytu">
+        <image src="../../images/1.png" mode="as"></image>
+      <view class="dyzi">
+        <text>我院专科医师赴法参加临床研究培训</text>
+      </view> 
+      </view>
+    </navigator>
+  </view>
+</block>
+<block >
+  <view class="dyda">
+    <navigator url="/pages/hdynamicszi/hdynamicszi">
+      <view class="dytu">
+        <image src="../../images/1.png" mode="as"></image>
+      <view class="dyzi">
+        <text>我院专科医师赴法参加临床研究培训</text>
+      </view> 
+      </view>
+    </navigator>
+  </view>
+</block> -->

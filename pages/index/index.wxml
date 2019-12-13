@@ -39,10 +39,6 @@
   </view>
   <view class="pic">
    <image src="../../images/1.png" mode="as"></image>
-     <text>医院动态</text>
-  </view>
-  <view class="pic">
-   <image src="../../images/1.png" mode="as"></image>
      <text>医院介绍</text>
   </view>
   <view class="pic">
@@ -56,10 +52,6 @@
   <view class="pic">
    <image src="../../images/1.png" mode="as"></image>
      <text>来院导航</text>
-  </view>
-  <view class="pic">
-   <image src="../../images/1.png" mode="as"></image>
-     <text>个人中心</text>
   </view>
   
   
