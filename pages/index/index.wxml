@@ -1,4 +1,3 @@
-<view class="sy">首页</view>
 <view class="container">
     <swiper indicator-dots="{{indicatorDots}}"
     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
@@ -18,39 +17,39 @@
 </view>
 <view class="ding">
   <view class="pic">
-   <image src="../../images/1.png" mode="as"></image>
+   <image src="../../images/index_images/online_registration.png" mode="as"></image>
      <text>预约挂号</text>
   </view>
    <view class="pic">
-   <image src="../../images/1.png" mode="as"></image>
+   <image src="../../images/index_images/online_consultation.png" mode="as"></image>
      <text>在线咨询</text>
   </view>
   <view class="pic">
-   <image src="../../images/1.png" mode="as"></image>
+   <image src="../../images/index_images/h_report.png" mode="as"></image>
      <text>检查报告</text>
   </view>
   <view class="pic">
-   <image src="../../images/1.png" mode="as"></image>
+   <image src="../../images/index_images/recharge_medical_card.png" mode="as"></image>
      <text>就诊卡充值</text>
   </view>
   <view class="pic">
-   <image src="../../images/1.png" mode="as"></image>
+   <image src="../../images/index_images/outpatient_payment.png" mode="as"></image>
      <text>门诊缴费</text>
   </view>
   <view class="pic">
-   <image src="../../images/1.png" mode="as"></image>
+   <image src="../../images/index_images/h_introduce.png" mode="as"></image>
      <text>医院介绍</text>
   </view>
   <view class="pic">
-   <image src="../../images/1.png" mode="as"></image>
+   <image src="../../images/index_images/s_introduce.png" mode="as"></image>
      <text>科室介绍</text>
   </view>
   <view class="pic">
-   <image src="../../images/1.png" mode="as"></image>
+   <image src="../../images/index_images/treatment_guide.png" mode="as"></image>
      <text>就诊指南</text>
   </view>
   <view class="pic">
-   <image src="../../images/1.png" mode="as"></image>
+   <image src="../../images/index_images/h_navigation.png" mode="as"></image>
      <text>来院导航</text>
   </view>
   

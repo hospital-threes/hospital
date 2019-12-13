@@ -7,11 +7,12 @@
     "pages/recharge_medical_card/recharge_medical_card",
     "pages/outpatient_payment/outpatient_payment",
     "pages/h_introduce/h_introduce",
-    "pages/h_dynamics/h_dynamics",
-    "pages/h_dynamics_zi/h_dynamics_zi",
     "pages/s_introduce/s_introduce",
     "pages/treatment_guide/treatment_guide", 
     "pages/h_navigation/h_navigation", 
+    
+    "pages/h_dynamics/h_dynamics",
+    "pages/h_dynamics_zi/h_dynamics_zi",
     "pages/personal_center/personal_center"
   ],
   "window": {
@@ -31,8 +32,8 @@
       {
         "pagePath": "pages/h_dynamics/h_dynamics",
         "text": "医院动态",
-        "iconPath": "images/tab-home.png",
-        "selectedIconPath": "images/tab-home-current.png"
+        "iconPath": "images/tab-dynamics.png",
+        "selectedIconPath": "images/tab-dynamics-current.png"
       },
       {
         "pagePath": "pages/personal_center/personal_center",
