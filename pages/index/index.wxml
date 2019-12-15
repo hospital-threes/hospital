@@ -8,12 +8,17 @@
         </block>
     </swiper>
 </view>
-   
+
+
 <view class="movie-info">
-  <view class="base-info">
-    <text>上海交通大学医学院附属第九人民医院 \n 门诊时间：上午8：00~11：30，下午13：30~17：00 \n 医院地址：上海市制造局路639号 \n 服务热线：23271699 转 5818（8：00-17：00   双休节假日除外）
-    </text> 
-  </view>
+  <block wx:for="{{list}}" wx:fot-item="item">
+    <view class="base-info">
+      <text>{{item.hospitalName}}
+门诊时间：上午8：00~11：30，下午13：30~17：00
+医院地址：{{item.hospitalAddress}}
+服务热线：{{item.hospitalTel}}（8：00-17：00双休节假日除外</text> 
+    </view>
+  </block>
 </view>
 <view class="ding">
   <view class="pic">

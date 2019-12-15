@@ -23,10 +23,10 @@ Page({
     var that = this;
 
     wx.request({
-      url: 'http://localhost:8081/SelectNew',
+      url: 'http://localhost:8081/hospitalIntroduce/SelectNews',
       method: 'post',
       header: {
-        'content-type': 'application/SelectNew' // 默认值
+        'content-type': 'application/SelectNews' // 默认值
       },
       success: function (res) {
         var list = res.data;
