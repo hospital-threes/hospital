@@ -1,18 +1,36 @@
 {
   "pages": [
     "pages/index/index",
+
     "pages/online_registration/online_registration",
+    "pages/online_registration/y_confirm/y_confirm",
+    "pages/online_registration/y_manage_patient/y_manage_patient",
+    "pages/online_registration/y_patient/y_patient",
+    "pages/online_registration/y_patient_information/y_patient_information",
+    "pages/online_registration/y_sucess/y_sucess",
+    "pages/online_registration/y_sucess_after/y_sucess_after",
+
     "pages/online_consultation/online_consultation",
+
     "pages/h_report/h_report",
+    "pages/h_report/jianchaXianging/jianchaXianging",
+
     "pages/recharge_medical_card/recharge_medical_card",
+
     "pages/outpatient_payment/outpatient_payment",
+
     "pages/h_introduce/h_introduce",
+
     "pages/s_introduce/s_introduce",
+
     "pages/treatment_guide/treatment_guide", 
+
     "pages/h_navigation/h_navigation", 
     
+
     "pages/h_dynamics/h_dynamics",
     "pages/h_dynamics/h_dynamics_zi/h_dynamics_zi",
+
     "pages/personal_center/personal_center"
   ],
   "window": {

@@ -1,0 +1,31 @@
+<view class="v1">
+    <view class="v2" style="border-top:1px solid  black;">订单号：<text class="gray">111</text></view>
+    <view class="v2">订单名称：<text class="gray">1111</text></view>
+    <view class="v3">订单金额：<text class="red">￥1111</text></view>
+   
+      
+  
+<!--遍历 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+ <view class="v4">选择支付方式</view>
+     <view>
+     <view>
+       <radio-group class="radio-group" bindchange="radioChange">
+                <radio  class="radio"   bindtap = "bindtap1" wx:for-items="{{items}}" wx:key="name"       value="{{item.name}}" checked = "{{item.checked}}">
+               <!--遍历支付方式 -->
+                    <text>{{item.value}}</text>
+                </radio>
+            </radio-group>
+     
+     </view>
+</view>
+
+</view>
+
+<text>\n</text>
+<text>\n</text>
+
+<view >
+<button class="buttonstyle"  bindTap='gotoPageyuyue1'>
+  支付
+</button>
+</view>

@@ -1,4 +1,4 @@
-// pages/hdynamicszi/hdynamicszi.js
+// pages/y_confirm/y_confirm.js
 Page({
 
   /**

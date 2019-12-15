@@ -1,0 +1,19 @@
+<!--pages/y_patient_information/y_patient_information.wxml-->
+
+<view class="v1">
+    <view class="v2" style="border-top:1px solid  black;">医院信息：<text class="gray">111</text></view>
+    <view class="v2">预约信息：<text class="gray">1111</text></view>
+    <view class="v2">预约医生：<text class="gray">1111</text></view>
+    <view class="v2">就诊人：<text class="jiu">1111</text></view>
+    <view class="v2">费用：<text class="red">￥111111</text></view>
+
+</view>
+
+
+
+<view >
+<button class="buttonstyle"  bindTap='gotoPageyuyue1'>
+  立即预约
+</button>
+</view>
+

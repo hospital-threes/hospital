@@ -1,4 +1,4 @@
-// pages/h_report/h_report.js
+// pages/jiancha/jiancha.js
 Page({
 
   /**
@@ -8,10 +8,47 @@ Page({
 
   },
 
+  //检查报告回显
+  houduanRequest: function () {
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8081/seclectReport?id=9',//自己请求的服务器的地址
+      method: 'GET',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (req) {
+
+        that.setData({
+          reports: req.data
+        })
+
+      }
+    })
+  },
+  // 检查报告就诊人信息回显
+  jiuzenren: function () {
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8081/JiuzenPerson?id=9',//自己请求的服务器的地址
+      method: 'GET',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (req) {
+        that.setData({
+          person: req.data
+        })
+
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.houduanRequest();
+    this.jiuzenren();
 
   },
 

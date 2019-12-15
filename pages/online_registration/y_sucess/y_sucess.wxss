@@ -1,0 +1,26 @@
+/* pages/y_sucess/y_sucess.wxss */
+
+.sucess{
+  font-weight:bold;    /*设置字体加粗*/
+  padding-left: 100px;
+
+}
+
+.neirong{
+  color:#D7183E;
+
+}
+
+  .buttonstyle{
+    width: 100%; 
+    padding-right: 8px; 
+    height: 60rpx; 
+    line-height: 60rpx; 
+    background:#41CFB3; 
+    color:#fff; 
+  }
+
+
+  .v1{
+ border-top:1px solid black;
+}

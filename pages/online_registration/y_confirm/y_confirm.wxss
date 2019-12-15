@@ -1,0 +1,41 @@
+.v2 {
+  border-bottom:1px dashed #BBBBBB;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  margin: 10px;
+
+}
+
+.gray{
+  color: #BBBBBB;
+    padding-left: 20px;
+}
+
+.jiu{
+   padding-left: 20px;
+}
+  
+  .red{
+    padding-left: 20px;
+    color: red;
+
+  }
+  .buttonstyle{
+    width: 100%; 
+    padding-right: 8px; 
+    height: 60rpx; 
+    line-height: 60rpx; 
+    background:#41CFB3; 
+    color:#fff; 
+  }
+
+  .v3{
+    border-bottom:5px solid #BBBBBB;
+     margin: 10px;
+     padding-bottom: 15px;
+  }
+
+   .v4{
+     margin: 10px;
+     padding-bottom: 15px;
+  }
