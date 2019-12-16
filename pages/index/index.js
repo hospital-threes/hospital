@@ -22,11 +22,7 @@ Page({
   },
   
   onLoad: function (options) {
-    
     this.index();
-    // 页面跳转判断值
-    var yemiancode = options.yemiancode;
-    this.tiaozhuanyemian(yemiancode);
   },
   index() {
     wx.showToast({
@@ -54,18 +50,27 @@ Page({
           that.setData({
             list: list
           })
-          console.log(res)
           wx.hideToast()
         }
       }
     })
   },
-  tiaozhuanyemian(yemiancode){//点击图片跳转页面
-    console.log(yemiancode)
-    wx.request({
-      url: 'http://localhost:8081/index/tiaozhuanyemian?code=' + yemiancode,
+  tiaozhuanyemian(event){//点击图片跳转页面
 
-    }) 
-  
+    // 页面跳转判断值 判断想要跳转什么页面
+    var yemiancode = event.currentTarget.dataset['yemiancode'];
+    
+    //判断用户登录信息
+    var userinfo = getApp().globalData.userinfo;
+    if (userinfo == null) {
+      wx.navigateTo({
+        url: '/pages/personal_center/personal_login/personal_login',
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/' + yemiancode + '/' + yemiancode + '?hospitalId=1',
+      })
+    }
   }
+  
 })

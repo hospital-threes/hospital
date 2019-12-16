@@ -1,4 +1,5 @@
-{"window": {
+{
+  "window": {
   "navigationBarBackgroundColor": "#ffffff",
   "navigationBarTextStyle": "black",
   "navigationBarTitleText": "小程序",
@@ -6,5 +7,5 @@
   "backgroundTextStyle": "light",
   "enablePullDownRefresh": false
 },
-  "usingComponents": {}
+"usingComponents": {}
 }

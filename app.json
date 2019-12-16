@@ -30,13 +30,14 @@
 
     "pages/h_dynamics/h_dynamics",
     "pages/h_dynamics/h_dynamics_zi/h_dynamics_zi",
-
-    "pages/personal_center/personal_center"
+    
+    "pages/personal_center/personal_center",
+    "pages/personal_center/personal_login/personal_login"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "医院介绍",
+    "navigationBarTitleText": "首页",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

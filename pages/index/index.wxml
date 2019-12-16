@@ -7,7 +7,7 @@
             </swiper-item>
         </block>
     </swiper>
-</view> 
+</view>
 
 
 <view class="movie-info">
@@ -22,10 +22,10 @@
 </view>
 <view class="ding">
   <view class="pic">
-   <navigator url="/pages/index/index?yemiancode=online_registration"  open-type="navigate" class="uploader-text">
-    <image src="../../images/index_images/online_registration.png" mode="as"></image>
-      <text>预约挂号</text>
-     </navigator>
+    <image src="../../images/index_images/online_registration.png" 
+      bindtap="tiaozhuanyemian" data-yemiancode="online_registration" mode="as">
+    </image>
+    <text>预约挂号 </text>
   </view>
    <view class="pic">
    <image src="../../images/index_images/online_consultation.png" mode="as"></image>
@@ -44,10 +44,8 @@
      <text>门诊缴费</text>
   </view>
   <view class="pic">
-   <navigator url="/pages/h_dynamics/h_dynamics_zi/h_dynamics_zi?id=1" open-type="navigate" class="uploader-text">
    <image src="../../images/index_images/h_introduce.png" mode="as"></image>
      <text>医院介绍</text>
-    </navigator>
   </view>
   <view class="pic">
    <image src="../../images/index_images/s_introduce.png" mode="as"></image>

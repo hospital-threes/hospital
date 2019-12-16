@@ -1,11 +1,12 @@
-// pages/online_registration/online_registration.js
+// pages/personal_center/personal_login/personal_login.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    phone:'',
+    pCode:''
   },
 
   /**
@@ -40,9 +41,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    wx.redirectTo({
-      url: '/pages/index/index'　　// 页面 A
-    })
+
   },
 
   /**
@@ -64,6 +63,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  
+  }
 })
