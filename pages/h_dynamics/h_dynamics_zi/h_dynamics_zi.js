@@ -4,14 +4,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: ''
+    list: '',
+    articleTitle:''
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    //从h_dynamice传来的
+    var articleTitle = options.articleTitle
+    this.setData({
+      articleTitle: articleTitle
+    })
+    var id=options.id
     //医院动态新闻id
+    console.log(id)
     var id = options.id;
     this.hdynamicszi(id);
   },
