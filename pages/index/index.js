@@ -61,10 +61,10 @@ Page({
     var yemiancode = event.currentTarget.dataset['yemiancode'];
     
     //判断用户登录信息
-    var userinfo = getApp().globalData.userinfo;
-    if (userinfo == null) {
+    var userId = getApp().globalData.userId;
+    if (userId == null) {
       wx.navigateTo({
-        url: '/pages/personal_center/personal_login/personal_login',
+        url: '/pages/personal_center/personal_login/personal_login?yemiancode=' + yemiancode,
       })
     } else {
       wx.navigateTo({
