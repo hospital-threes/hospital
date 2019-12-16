@@ -18,17 +18,15 @@ Page({
     // autoplay：是否自动切换，默认为false;
     // interval：自动切换时间间隔，默认5000ms;
     // duration: 滑动动画时长，默认为1000ms;
-    list: ''
-
+    list: '',
   },
   
-
-
-
-
-
   onLoad: function (options) {
+    
     this.index();
+    // 页面跳转判断值
+    var yemiancode = options.yemiancode;
+    this.tiaozhuanyemian(yemiancode);
   },
   index() {
     wx.showToast({
@@ -39,7 +37,7 @@ Page({
     var that = this;
 
     wx.request({
-      url: 'http://localhost:8081/index/SelectHos',
+      url: 'http://localhost:8081/index/SelectHos?hospitalId=1',
       method: 'post',
       header: {
         'content-type': 'application/SelectHos' // 默认值
@@ -61,6 +59,13 @@ Page({
         }
       }
     })
-  }
+  },
+  tiaozhuanyemian(yemiancode){//点击图片跳转页面
+    console.log(yemiancode)
+    wx.request({
+      url: 'http://localhost:8081/index/tiaozhuanyemian?code=' + yemiancode,
 
+    }) 
+  
+  }
 })

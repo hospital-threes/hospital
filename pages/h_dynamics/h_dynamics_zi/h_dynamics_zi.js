@@ -4,20 +4,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    id: '',
     list: ''
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      id: options.id
 
-    })
+    //医院动态新闻id
     var id = options.id;
-    console.log(options.id + "asds")
-    console.log(id + "xxx")
     this.hdynamicszi(id);
   },
 

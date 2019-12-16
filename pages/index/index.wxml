@@ -22,8 +22,10 @@
 </view>
 <view class="ding">
   <view class="pic">
-   <image src="../../images/index_images/online_registration.png" mode="as"></image>
-     <text>预约挂号</text>
+   <navigator url="/pages/index/index?yemiancode=online_registration"  open-type="navigate" class="uploader-text">
+    <image src="../../images/index_images/online_registration.png" mode="as"></image>
+      <text>预约挂号</text>
+     </navigator>
   </view>
    <view class="pic">
    <image src="../../images/index_images/online_consultation.png" mode="as"></image>
