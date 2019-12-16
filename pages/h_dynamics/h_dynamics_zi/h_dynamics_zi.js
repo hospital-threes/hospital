@@ -4,18 +4,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-    id:'',
+    id: '',
     list: ''
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.setData({
       id: options.id
+
     })
-    console.log(id + "asds")
+    var id = options.id;
+    console.log(options.id + "asds")
+    console.log(id + "xxx")
     this.hdynamicszi(id);
   },
 
@@ -27,7 +29,7 @@ Page({
     })
     var that = this;
     wx.request({
-      url: 'http://localhost:8081/hospitalIntroduce/SelectArticleInfoAll?',
+      url: 'http://localhost:8081/hospitalIntroduce/SelectArticleInfoAll?id='+id,
       method: 'GET',
       header: {
         'content-type': 'application/json' // 默认值
