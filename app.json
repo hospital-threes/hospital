@@ -14,7 +14,7 @@
     
     "pages/h_report/h_report",
     "pages/h_report/jianchaXianging/jianchaXianging",
-
+    
     "pages/recharge_medical_card/recharge_medical_card",
 
     "pages/outpatient_payment/outpatient_payment",
@@ -77,7 +77,6 @@
       "desc": "你的位置信息将用于小程序定位"
     }
   },
-  
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

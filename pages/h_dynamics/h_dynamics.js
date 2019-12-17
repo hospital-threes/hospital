@@ -21,7 +21,6 @@ Page({
       duration: 10000
     })
     var that = this;
-    
     wx.request({
       url: 'http://localhost:8081/hospitalIntroduce/SelectNews',
       method: 'post',

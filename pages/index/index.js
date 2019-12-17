@@ -70,7 +70,7 @@ Page({
       })
     } else {
       wx.navigateTo({
-        url: '/pages/' + yemiancode + '/' + yemiancode + '?hospitalId=1',
+        url: '/pages/' + yemiancode + '/' + yemiancode,
       })
     }
   }

@@ -18,9 +18,9 @@ Page({
     })
 
   },
+  //监事页面加载函数
   onLoad: function (options) {
     //医院动态新闻id
-
     this.setData({
       yemiancode: options.yemiancode
     })
