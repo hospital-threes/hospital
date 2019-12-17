@@ -4,43 +4,9 @@
     <view class="user" hoverClass="none">
       <view class="user_box">
         <view catchtap="previewImage" class="logo">
-          <image src="{{userInfo.avatarUrl}}"></image>
+          <image src="../../images/my_images/default_userImg.jpg"></image>
           <view class="cu-tag badge {{male==1?'icon-male bg-blue':'icon-female bg-pink'}}"></view>
         </view>
-        <block wx:if="{{vip}}">
-          <view class="user_info">
-            <view class="user_name">
-              <text>{{userInfo.nickName}}</text>
-              <image src="/images/main/vip.png"></image>
-            </view>
-            <view class="vip_expires">vip到期时间：{{vip_time}}，<button class="joinVip" bindtap='joinVip'>马上续费</button></view>
-          </view>
-        </block>
-        <block wx:else>
-          <view class="user_info">
-            <view class="user_name">
-              <text>{{userInfo.nickName}}</text>
-            </view>
-            <view class="vip_expires" bindtap='joinVip'>您还不是VIP，
-              <span style="color:blue;">请充值</span>
-            </view>
-          </view>
-        </block>
-      </view>
-    </view>
-    <image src='https://edu.qinhui88.com/assets/wx/image/wave.gif' mode='scaleToFill' class='gif-wave'></image>
-    <view class="info" style='display:none'>
-      <view class="item" bindtap=''>
-        <text class="count">{{today_s}}</text>
-        <text class="title">坚持学习/{{practiceday}}天</text>
-      </view>
-      <view class="item">
-        <text class="count">{{studytime}}</text>
-        <text class="title">学习时长/{{studytime}}分钟</text>
-      </view>
-      <view class="item">
-        <text class="count">{{practicetime}}</text>
-        <text class="title">完成练习/{{practicetime}}节</text>
       </view>
     </view>
   </view>
@@ -50,88 +16,71 @@
       <view class='wallet'>
         <text class='icon-news icon'></text>
         <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
-        <text>我的课程</text>
+        <text>待支付订单</text>
       </view>
       <view class="icon">
         <text class='icon-right'></text>
       </view>
     </view>
-    <view bindtap="openPage" class="item" data-url="/pages/collect/collect" formType="submit" hoverClass="none">
+    <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
       <view class='wallet'>
-        <text class='icon-favor icon'></text>
+        <text class='icon-news icon'></text>
         <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
-        <text>我的收藏</text>
+        <text>在线咨询订单</text>
       </view>
       <view class="icon">
         <text class='icon-right'></text>
       </view>
     </view>
-    <!-- <view bindtap="openPage" class="item" data-url="/pages/wallet/wallet" formType="submit" hoverClass="none">
+    <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
       <view class='wallet'>
-        <text class='icon-moneybag icon'></text>
+        <text class='icon-news icon'></text>
         <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
-        <text>我的钱包</text>
-      </view>
-      <view class="icon">
-        <text class='icon-right'></text>
-      </view>
-    </view> -->
-    <!--  -->
-    <view bindtap="openPage" class="item" data-url="/pages/purchase_history/purchase_history" formType="submit" hoverClass="none">
-      <view class='wallet'>
-        <text class='icon-form icon'></text>
-        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
-        <text>我的订单</text>
+        <text>预约挂号订单</text>
       </view>
       <view class="icon">
         <text class='icon-right'></text>
       </view>
     </view>
-    <button bindtap="chooseGeren" class="item">
+    <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
       <view class='wallet'>
-        <text class='icon-location icon'></text>
+        <text class='icon-news icon'></text>
         <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
-        <text>我的地址</text>
-      </view>
-      <view class="icon">
-        <text class='icon-right'></text>
-      </view>
-    </button>
-    <view bindtap="openPage" class="item" data-url="/pages/about/about" formType="submit" hoverClass="none">
-      <view class='wallet'>
-        <text class='icon-info icon'></text>
-        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
-        <text>关于我们</text>
+        <text>门诊缴费订单</text>
       </view>
       <view class="icon">
         <text class='icon-right'></text>
       </view>
     </view>
-    <!-- <view bindtap="openPage" class="item" data-url="/pages/advice/advice" formType="submit" hoverClass="none">
-      <view class='wallet'><text class='icon-deit icon'></text><text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text><text>意见反馈</text></view>
-      <view class="icon">
-        <text class='icon-right'></text>
-      </view>
-    </view> -->
-    <button class="item" bindtap='changeView'>
+    <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
       <view class='wallet'>
-        <text class='icon-settings icon'></text>
+        <text class='icon-news icon'></text>
         <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
-        <text>设置中心</text>
+        <text>就诊卡充值订单</text>
       </view>
       <view class="icon">
         <text class='icon-right'></text>
       </view>
-    </button>
-    <button class="item" formType="submit" hoverClass="none" openType="contact">
+    </view>
+    <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
       <view class='wallet'>
-        <text class='icon-service icon'></text>
+        <text class='icon-news icon'></text>
         <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
-        <text>联系客服</text>
+        <text>报告单查询</text>
       </view>
       <view class="icon">
         <text class='icon-right'></text>
       </view>
-    </button>
+    </view>
+    <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
+      <view class='wallet'>
+        <text class='icon-news icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>管理就诊人</text>
+      </view>
+      <view class="icon">
+        <text class='icon-right'></text>
+      </view>
+    </view>
   </view>
 </form>
