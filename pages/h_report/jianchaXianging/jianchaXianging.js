@@ -10,11 +10,12 @@ Page({
 
   // 检查报告就诊人和信息详情页面回显
   jiuzenren: function (options) {
-    console.log(options.reportId);
     var reportId = options.reportId;
+    var fileaddr = options.fileaddr;
+    console.log(fileaddr+"---------------");  
     var that = this;
     wx.request({
-      url: 'http://localhost:8081/Xingqing?id=2&reportId=' + reportId + '',//自己请求的服务器的地址
+      url: 'http://localhost:8081/Xingqing?id=14&reportId=' + reportId + '',//自己请求的服务器的地址
       method: 'GET',
       header: {
         'content-type': 'application/json' // 默认值
@@ -26,6 +27,25 @@ Page({
 
       }
     })
+
+
+//回显报表
+    wx.request({
+      url: 'http://localhost:8081/baobiao?fileAddr=' + fileaddr,//自己请求的服务器的地址
+      method: 'POST',
+      header: {
+         'content-type': 'application/json' // 默认值
+        //"Content-Type": "json"
+      },
+      success: function (req) {
+        that.setData({
+          fileaddr: req.data
+      
+        })
+
+      }
+    })
+
   },
 
 

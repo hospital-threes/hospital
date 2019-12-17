@@ -9,10 +9,23 @@ Page({
   },
 
 // 按钮--就诊人立即预约
-  gotoPageyuyue1: function () {
-     wx.navigateTo({ url: 'pages/index/index',}) 
-     
-     },
+  gotoPageyuyue1: function (event) {
+
+    wx.navigateTo({
+      //判断费用是否有值---有值跳成功支付页面---反跳支付页面
+      // if(){
+      //   url: '/pages/y_sucess/y_sucess'
+      // }
+
+      url: '/pages/online_registration/y_confirm/y_confirm'
+
+    })
+
+  },
+
+
+
+
 
   /**
    * 生命周期函数--监听页面加载

@@ -1,55 +1,73 @@
-// pages/jiancha/jiancha.js
+// pages/appointment/appointment.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    flag: 0,
+    currentTab: 0
   },
-
-  //检查报告回显
-  houduanRequest: function () {
+  switchNav: function (e) {
     var that = this;
+    var deptId = e.currentTarget.dataset.bookId
     wx.request({
-      url: 'http://localhost:8081/seclectReport?id=14',//自己请求的服务器的地址
+      url: 'http://localhost:8080/doctor/appointment',//自己请求的服务器的地址
+      data:{
+        deptId: deptId
+      },
       method: 'GET',
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function (req) {
-
+        console.log(req.data)
         that.setData({
-          reports: req.data
+            pp:req.data
         })
-
       }
     })
-  },
-  // 检查报告就诊人信息回显
-  jiuzenren: function () {
-    var that = this;
-    wx.request({
-      url: 'http://localhost:8081/JiuzenPerson?id=14',//自己请求的服务器的地址
-      method: 'GET',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (req) {
-        that.setData({
-          person: req.data
-        })
 
-      }
-    })
+
+    
+    var page = this;
+    var id = e.target.id;
+    if (this.data.currentTab == id) {
+      return false;
+    } else {
+      page.setData({
+        currentTab: id
+      });
+    }
+    page.setData({
+      flag: id
+    });
   },
+  catchTouchMove: function (res) {
+    return false
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.houduanRequest();
-    this.jiuzenren();
-
+    var that = this;
+    var deptId=1;
+    wx.request({
+      url: 'http://localhost:8080/doctor/appointment',//自己请求的服务器的地址
+      data: {
+        deptId:deptId
+      },
+      method: 'GET',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (req) {
+        that.setData({
+          pp: req.data
+        })
+      }
+    })
   },
 
   /**

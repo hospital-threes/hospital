@@ -1,4 +1,4 @@
-// pages/online_registration/online_registration.js
+// pages/y_time/y_time.js
 Page({
 
   /**
@@ -7,6 +7,16 @@ Page({
   data: {
 
   },
+  writedata: function (event) {
+
+    wx.navigateTo({
+
+      url: '/pages/online_registration/y_patient_information/y_patient_information'
+
+    })
+
+  },
+
 
   /**
    * 生命周期函数--监听页面加载

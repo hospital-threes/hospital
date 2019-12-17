@@ -25,7 +25,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.9.4",
 	"appid": "wx363688038157b48b",
-	"projectname": "%E8%BF%9E%E6%8E%A5php",
+	"projectname": "hospital",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

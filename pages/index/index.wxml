@@ -56,8 +56,12 @@
      <text>就诊指南</text>
   </view>
   <view class="pic">
+  <block wx:for="{{list}}" wx:fot-item="item">
+    <navigator url="/pages/h_navigation/h_navigation?longitude={{item.longitude}}&latitude={{item.latitude}}&hospitalName={{item.hospitalName}}" open-type="navigate" class="uploader-text">
    <image src="../../images/index_images/h_navigation.png" mode="as"></image>
      <text>来院导航</text>
+     </navigator>
+  </block>
   </view>
   
   

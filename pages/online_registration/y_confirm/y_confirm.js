@@ -8,11 +8,51 @@ Page({
 
   },
 
+  radioChange: function (e) {
+    var str = null;
+    for (var value of this.data.items) {
+      if (value.name === e.detail.value) {
+        str = value.value;
+        console.log(str);
+        break;
+      }
+    }
+    this.setData({ radioStr: str });
+  }
+,
+
+// 点击支付后跳转页面
+  yuyuesucessafter: function (event) {
+
+    wx.navigateTo({
+
+      url: "/pages/online_registration/y_sucess_after/y_sucess_after"
+
+    })
+
+  },
+
+
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8081/doctor/selectZhifuStyle',//自己请求的服务器的地址
+      method: 'GET',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (req) {
 
+        that.setData({
+          zhifus: req.data
+        })
+
+      }
+    })
   },
 
   /**
@@ -36,11 +76,34 @@ Page({
 
   },
 
+ //支付失败返回按钮弹出模态框
+  modalcnt: function () {
+    wx.showModal({
+      title: '提示',
+      content: '支付失败,此次预约订单将自动删除',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('再次预约')
+          wx.reLaunch({
+            url: '/pages/online_registration/y_time/y_time'//调回预约页面（支付失败弹出模态框---预加载）
+          })
+        } else if (res.cancel) {
+          console.log('不预约了')
+          wx.reLaunch({
+            url: '/pages/online_registration/y_time/y_time'//调回预约页面（支付失败弹出模态框---预加载）
+          })
+        }
+      }
+    })
+  },
+
+
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-
+  onUnload: function () {//左上角返回判断
+    //先弹出模态框
+    this.modalcnt();
   },
 
   /**

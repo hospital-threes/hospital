@@ -1,0 +1,93 @@
+<view class="xq" >
+  <view style="float:left;">
+    <image src="/images/头像.jpg" mode="aspectFill" id="tx"/>
+  </view>
+  <view style="float:left; margin-left: 20rpx;">
+    <!-- ********************个人擅长**************************** -->
+<view style="float:right">
+<scroll-view class='page' >
+  <!-- 列表 -->
+  <view class='list' wx:for='{{DataSource}}' wx:key="index">
+    <!-- 内容 start-->
+    <view class="user-content-view {{item.isF?'hide':'show'}}">
+      <text class="user-content">{{item.content}}</text>
+    </view>
+      <!-- 内容 end-->
+
+    <!-- 展开 收起 strat-->
+    <view bindtap="change" class="state" data-index="{{index}}"><button style="background-color: blue;color:white;height:70rpx;width:300rpx;border-radius: 98rpx; ">免费咨询</button>{{item.isF?'展开':'收起'}}</view>
+    <!-- 展开 收起  end -->
+    </view>
+
+</scroll-view>
+</view>
+  </view>
+  <!-- ***********************************地址********************************** -->
+<view class="address">
+  <text>
+   出诊地点\n{{address.visitplaces}}\n地址：{{address.visitaddress}}
+  </text>
+   
+  </view>
+  <view>
+<!-- **************************日历*************************** -->
+  <view class='containt' >
+  <scroll-view class="scroll-view_H" scroll-x>
+    <view class='list1' >
+      <view bindtap="select" wx:for="{{ calendar }}" wx:for-item="item" wx:for-index="index" data-index="{{ index }}" class='listItem {{index==currentIndex? "current":""}}' data-id="{{item.id}}">
+        <text class='name'>{{ item.week }}</text>
+        <text class='date'>{{ item.appointmentTimes }}</text>
+        <text class='date'>{{ item.appointmentStatus }}</text>
+
+      </view>
+    </view>
+  </scroll-view>
+  </view>
+
+<!-- **************************上下午号源*************************** -->
+<view style="height:180rpx">
+  <view style="float:left;margin-left:230rpx;margin-top:50rpx"> 号源 <span style="color:red;">￥50.00</span><view style="width:150rpx;float:right" bindtap='showRule'><button size="mini">
+  {{status}}</button></view></view>
+</view>
+  <!-- **************************同科室其他医生推荐*************************** -->
+<view>
+同科室其他医生推荐
+  <view wx:for="{{doctorxq}}" wx:fot-item="item">
+  <view >
+            <navigator url="../details/details?cc={{item.adeptat}}&&id={{item.id}}&&deptname={{item.departmentName}}" open-type="navigate">
+              <view  bindtap="huoqu" style="width:500rpx">
+              <view style="float:left">
+               <image src="/images/头像.jpg" mode="aspectFill" id="tx"/>
+              </view>
+              <view style="width:500rpx;margin-left: 180rpx;float:left;display:flex;margin-top:-100rpx;" >
+          <text class="tt" decode="{{true}}" style=""> {{item.name}}\n{{item.rankName}}&nbsp;&nbsp;{{item.departmentName}}\n 擅长：{{item.adeptat}}</text>
+              </view>
+              
+              </view>
+              </navigator>
+              </view>
+              </view>
+</view>
+</view>
+  </view>
+
+
+<!-- ****************************--遮罩层--********************************************** -->
+
+
+<!--遮罩层-->
+<view class="ruleZhezhao {{isRuleTrue?'isRuleShow':'isRuleHide'}}">
+    <view class='ruleZhezhaoContent'>
+      <view wx:for="{{appointmenttime}}" wx:for-item="item">
+      <view wx:if="{{item.timeframeStatus=='约满'}}" style="color:gray;line-height:80rpx">
+       {{item.timeframe}}<sp style="padding-left:50rpx">{{item.timeframeStatus}}</sp>
+      </view>
+      <view wx:if="{{item.timeframeStatus=='可预约'}}" style="color:#66CCFF;line-height:80rpx">
+       {{item.timeframe}}<navigator style="float:right;padding-left:50rpx">{{item.timeframeStatus}}</navigator>
+      </view>
+         
+      </view>
+      
+      <image src='/images/错误.png' class='ruleHide' bindtap='hideRule'></image>
+    </view>
+  </view>

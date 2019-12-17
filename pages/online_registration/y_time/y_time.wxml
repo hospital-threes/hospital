@@ -1,0 +1,2 @@
+<!--pages/y_time/y_time.wxml-->
+<button bindtap='writedata'>点击跳转预约</button>

@@ -5,15 +5,15 @@
 <view >
     <view class="flex-column" style="display:flex;flex-direction: column;border-bottom:2px dashed gray;border-top:2px solid gray;" >
         <view class="flex-view-item" style="color:gray; display:flex;flex-direction: row;width:300px; letter-spacing:3rpx;margin:8px;">       
-        姓名 :{{person.patientName}} 
+        姓名 :{{person.username}} 
         </view>
         <!-- 跳页面 -->
         <view style="position:absolute;right:20px;">
-           <navigator  url="/pages/h_report/jianchaXianging/jianchaXianging"    hover-class="navigator-hover">></navigator>
+           <navigator  url="/pages/jianchaXianging/jianchaXianging"    hover-class="navigator-hover">></navigator>
         </view>
      
         <view class="flex-view-item"  style="color:gray;margin:10px;letter-spacing:3rpx;">
-        就诊卡号:{{person.patientIdCard}} 
+        就诊卡号:{{person.phone}} 
         </view>
     </view>
 </view>
@@ -30,7 +30,7 @@
         </view>
    <!-- 跳页面 -->
         <view style="position:absolute;right:20px;">
-           <navigator  url="/pages/h_report/jianchaXianging/jianchaXianging?reportId={{item.id}}"    hover-class="navigator-hover">></navigator>
+           <navigator  url="/pages/h_report/jianchaXianging/jianchaXianging?reportId={{item.id}}&fileaddr={{item.fileAddr}}"    hover-class="navigator-hover">></navigator>
         </view>
         <view class="flex-view-item"  style="color:gray;margin:10px;letter-spacing:3rpx;">
          检查内容:{{item.examineInfo}}

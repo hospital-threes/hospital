@@ -4,6 +4,7 @@
   padding-bottom: 15px;
   margin: 10px;
 
+
 }
 
 .gray{
@@ -39,3 +40,21 @@
      margin: 10px;
      padding-bottom: 15px;
   }
+    .orange{
+    padding-left: 20px;
+    color: red;
+    font-size: 13px;
+
+  }
+
+  
+  
+.radio {
+     display: block;
+     border-bottom: 1px dashed #ddd;
+     padding: 5px;
+     padding-top: 10px;
+     padding-bottom: 15px;
+     margin: 10px;
+   
+}

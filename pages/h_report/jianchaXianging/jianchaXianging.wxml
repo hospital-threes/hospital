@@ -23,39 +23,22 @@
    <text>\n</text>
   </view>
 <view class="table">
-    <view class="tr thead">
+    <view  class="tr thead">
      <view class="td">名称</view>
      <view class="td">结果</view>
      <view class="td ">参考值</view>
     </view>
-    <block>
-      <view class="tr" >
-      <view class="td">白细胞%</view>
-      <view class="td">7.36</view>
-      <view class="td">4.5-3.5</view>
-     </view>
-       <view class="tr" >
-      <view class="td">红细胞%</view>
-      <view class="td">7.36</view>
-      <view class="td">4.5-3.5</view>
-     </view>
-       <view class="tr" >
-      <view class="td">淋巴细胞%</view>
-      <view class="td">7.36</view>
-      <view class="td">4.5-3.5</view>
-     </view>
-       <view class="tr" >
-      <view class="td">单核细胞%</view>
-      <view class="td">7.36</view>
-      <view class="td">6.5-9.5</view>
-     </view>
-       <view class="tr" >
-      <view class="td">中心粒细胞%</view>
-      <view class="td">7.36</view>
-      <view class="td">4.5-9.5</view>
-     </view>
-    </block>
+   
+<block  wx:for="{{fileaddr}}"   wx:for-item="item" >
+   <view class="tr" >
+     <view class="td">{{item.name}}</view>
+     <view class="td">{{item.jiehuo}}</view>
+     <view class="td">{{item.cankaozhi}}</view>
+   </view>
+ </block>
+
+
+
    </view>
  </view>
 </view>
-
