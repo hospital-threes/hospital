@@ -1,3 +1,4 @@
+var app = getApp()
 Page({
 
   /**
@@ -50,6 +51,7 @@ Page({
           that.setData({
             list: list
           })
+          app.globalData.hospitalInfo = list[0];
           wx.hideToast()
         }
       }

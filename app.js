@@ -34,6 +34,7 @@ App({
     })
   },
   globalData: {
-    userId: 18
+    userId: 18,
+    hospitalInfo: null
   }
 })
