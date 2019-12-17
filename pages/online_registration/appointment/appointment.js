@@ -12,7 +12,7 @@ Page({
     var that = this;
     var deptId = e.currentTarget.dataset.bookId
     wx.request({
-      url: 'http://localhost:8080/doctor/appointment',//自己请求的服务器的地址
+      url: 'http://localhost:8081/doctor/appointment',//自己请求的服务器的地址
       data:{
         deptId: deptId
       },
@@ -54,7 +54,7 @@ Page({
     var that = this;
     var deptId=1;
     wx.request({
-      url: 'http://localhost:8080/doctor/appointment',//自己请求的服务器的地址
+      url: 'http://localhost:8081/doctor/appointment',//自己请求的服务器的地址
       data: {
         deptId:deptId
       },
