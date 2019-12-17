@@ -10,6 +10,7 @@
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
+		"nodeModules": false,
 		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
@@ -24,7 +25,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.4",
-	"appid": "wx363688038157b48b",
+	"appid": "wxacad75056b2fd683",
 	"projectname": "hospital",
 	"debugOptions": {
 		"hidedInDevtools": []

@@ -24,11 +24,8 @@ Page({
       longitude: longitude,
       hospitalName: hospitalName
     })
-    console.log(longitude + "222")
-    console.log(latitude + "qweqwe")
-    console.log(hospitalName + "qweqwe")
     let plugin = requirePlugin('routePlan');
-    let key = '23NBZ-ANPCW-QRWRU-RZOEM-RECR3-FGFJX';  //使用在腾讯位置服务申请的key
+    let key = 'HSSBZ-J72C6-Z2XSH-EMTQF-KBYN5-CAFJI';  //使用在腾讯位置服务申请的key
     let referer = 'hospital';   //调用插件的app的名称
     //let table_id= "Ck4CYItaBbXTR1ZzyMpfBEavdv5lrYC";
     let endPoint = JSON.stringify({  //终点

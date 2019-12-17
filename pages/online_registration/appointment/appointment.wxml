@@ -9,8 +9,6 @@
           <swiper current='{{currentTab}}' style='height:500px' vertical="{{true}}">
             <swiper-item id='0' catchtouchmove="stopTouchMove">
               <view>妇科</view>
-              
-
             <view wx:for="{{pp}}" wx:fot-item="item">
             <navigator url="../details/details?cc={{item.adeptat}}&&id={{item.id}}&&deptname={{item.departmentName}}" open-type="navigate">
               <view class="xq" bindtap="huoqu">
