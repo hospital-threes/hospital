@@ -22,7 +22,7 @@ Page({
     })
     var that = this;
     wx.request({
-      url: 'http://localhost:8081/hospitalIntroduce/SelectNews',
+      url: 'http://localhost:8081/hospitalIntroduce/SelectNews?articleType=' + 2 +'&hospitalId='+1,
       method: 'post',
       header: {
         'content-type': 'application/SelectNews' // 默认值

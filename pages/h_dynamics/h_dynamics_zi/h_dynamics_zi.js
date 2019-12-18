@@ -4,13 +4,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: ''
+    list: '',
+    articleTitle:''
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    //把拿到的值放在wxml里面
+    this.setData({
+      articleTitle: options.articleTitle
+    })
     //医院动态新闻id
     var id = options.id;
     this.hdynamicszi(id);

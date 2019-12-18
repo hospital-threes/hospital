@@ -1,5 +1,5 @@
 // pages/details/details.js
-const app = getApp()
+var app = getApp()
 
 const api = app.globalData.api
 Page({
@@ -24,7 +24,11 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-    onLoad: function (options) {
+    onLoad: function (options) {//动态获取参数
+  
+      console.log(options.id + "*********************00000");
+      
+      
     this.setData({
       DataSource: [
         {
@@ -32,10 +36,22 @@ Page({
           content: options.cc,
         }
       ],
-      id: options.id,
-      deptname:options.deptname
-    })
+      //医生id
+      doctorid: options.id,
+      // 医生职位
+      departmentName: options.deptname,
+      //医生姓名
+      doctorname: options.name,
+
     
+
+    
+//8888888888888888888888888888888888888888888888888888888888888888888888
+    })
+      var app = getApp();
+      app.globalData.doctorId = options.id;
+
+      
     this.huoquaddress(options);
     this.huoqutime(options);
     this.huoquadministrative(options);
@@ -48,7 +64,7 @@ Page({
     var that = this;
 
     wx.request({
-      url: 'http://localhost:8080/doctor/huoqustutas',//自己请求的服务器的地址
+      url: 'http://localhost:8081/doctor/huoqustutas',//自己请求的服务器的地址
       data: {
         
       },
@@ -62,7 +78,7 @@ Page({
         })
 
         wx.request({
-          url: 'http://localhost:8080/doctor/huoquappointmenttime',//自己请求的服务器的地址
+          url: 'http://localhost:8081/doctor/huoquappointmenttime',//自己请求的服务器的地址
           data: {
           },
           method: 'GET',
@@ -86,7 +102,7 @@ Page({
     var deptname = options.deptname;
     
     wx.request({
-      url: 'http://localhost:8080/doctor/huoquadministrative',//自己请求的服务器的地址
+      url: 'http://localhost:8081/doctor/huoquadministrative',//自己请求的服务器的地址
       data: {
         deptname: deptname
       },
@@ -97,6 +113,7 @@ Page({
       success: function (req) {
         that.setData({
           doctorxq: req.data
+
         })
       }
     })
@@ -106,13 +123,13 @@ Page({
     var that = this;
     var id=options.id;
     wx.request({
-      url: 'http://localhost:8080/doctor/huoqutime',//自己请求的服务器的地址
+      url: 'http://localhost:8081/doctor/huoqutime',//自己请求的服务器的地址
       data: {
         id: id
       },
       method: 'GET',
       header: {
-        'content-type': 'application/json' // 默认值
+        'content-type': 'application/json;charset=utf-8' // 默认值
       },
       success: function (req) {
         that.setData({
@@ -127,7 +144,7 @@ Page({
    
     var id=options.id
     wx.request({
-      url: 'http://localhost:8080/doctor/huoquaddress',//自己请求的服务器的地址
+      url: 'http://localhost:8081/doctor/huoquaddress',//自己请求的服务器的地址
       data: {
         id: id
       },
@@ -136,7 +153,11 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (req) {
-        
+        //存储格式 wx.setStorageSync('key命名', value内容);
+        wx.setStorageSync('doctorid', req.data.id);
+        wx.setStorageSync('doctorname', req.data.name);
+        wx.setStorageSync('price', req.data.price);
+        console.log(req.data.name + "%%%%%%%%%%%%%%%%%%%%%%");
         that.setData({
           address: req.data
         })
@@ -201,21 +222,21 @@ Page({
     var id = event.currentTarget.dataset.id;
     //查询预约状态
     wx.request({
-      url: 'http://localhost:8080/doctor/huoqustutas',//自己请求的服务器的地址
+      url: 'http://localhost:8081/doctor/huoqustutas',//自己请求的服务器的地址
       data: {
         id: id
       },
       method: 'GET',
       header: {
-        'content-type': 'application/json' // 默认值
+        'content-type': 'application/json;' // 默认值
+       
       },
       success: function (req) {
-        console.log("ooooooooooo"+req.data)
         that.setData({
           status: req.data
         })
         wx.request({
-          url: 'http://localhost:8080/doctor/huoquappointmenttime',//自己请求的服务器的地址
+          url: 'http://localhost:8081/doctor/huoquappointmenttime',//自己请求的服务器的地址
           data: {
             id: id
           },
@@ -224,6 +245,7 @@ Page({
             'content-type': 'application/json' // 默认值
           },
           success: function (req) {
+            console.log(req)
             that.setData({
               appointmenttime: req.data
             })
@@ -238,8 +260,12 @@ Page({
     
   },
   //打开规则提示
-  showRule: function () {
-    var that=this;
+  showRule: function (e) {
+    var that = this;
+    var week = e.currentTarget.dataset.week;
+  
+    
+
     that.setData({
       isRuleTrue: true
     })
@@ -253,3 +279,4 @@ Page({
   },
   
 })
+

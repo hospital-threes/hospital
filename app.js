@@ -35,6 +35,12 @@ App({
   },
   globalData: {
     userId: 18,
+<<<<<<< HEAD
+    //
     hospitalInfo: null
+=======
+    hospitalInfo: null,
+    hospital: "上海交通大学医学院附属第九人民医院"
+>>>>>>> hospital
   }
 })

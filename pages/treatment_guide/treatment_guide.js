@@ -12,7 +12,39 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.hdynamics();
+  },
+  hdynamics() {
+    wx.showToast({
+      title: '正在加载',
+      icon: 'loading',
+      duration: 10000
+    })
+    var that = this;
 
+    wx.request({
+      url: 'http://localhost:8081/hospitalIntroduce/SelectNews?articleType=' + 1 + '&hospitalId=' + 1,
+      method: 'post',
+      header: {
+        'content-type': 'application/SelectNews' // 默认值
+      },
+      success: function (res) {
+        var list = res.data;
+        if (list == null) {
+          wx.showToast({
+            title: 'ErrorMessage',
+            icon: 'false',   //图标
+            duration: 1500  //提示的延迟的时间
+          })
+        } else {
+          that.setData({
+            list: list
+          })
+          console.log(res)
+          wx.hideToast()
+        }
+      }
+    })
   },
 
   /**

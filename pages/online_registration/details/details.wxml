@@ -83,7 +83,8 @@
        {{item.timeframe}}<sp style="padding-left:50rpx">{{item.timeframeStatus}}</sp>
       </view>
       <view wx:if="{{item.timeframeStatus=='可预约'}}" style="color:#66CCFF;line-height:80rpx">
-       {{item.timeframe}}<navigator style="float:right;padding-left:50rpx">{{item.timeframeStatus}}</navigator>
+       {{item.timeframe}}<navigator style="float:right;padding-left:50rpx"  url="/pages/online_registration/y_patient_information/y_patient_information?id={{item.id}}&&apptimeId={{item.appointmenttimeId}}" open-type="navigate">
+       {{item.timeframeStatus}}</navigator>
       </view>
          
       </view>

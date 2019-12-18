@@ -1,4 +1,5 @@
 // pages/y_patient_information/y_patient_information.js
+var app = getApp()
 Page({
 
   /**
@@ -31,7 +32,47 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var price = wx.getStorageSync("price")
+  
 
+
+    this.setData({
+      id:options.id,
+      apptimeId: options.apptimeId,
+      price: price,
+      hospital: app.globalData.hospital,
+
+    })
+    this.findtime(options);
+  },
+  //获取预约时间
+  findtime: function (options){
+    var doctorId = getApp().globalData.doctorId
+    var hospital=getApp().globalData.hospital
+    var that = this;
+    that.setData({
+      hospital: hospital
+    })
+    var id=options.id
+    var apptimeId = options.apptimeId
+    wx.request({
+      url: 'http://localhost:8081/doctor/findtime',//自己请求的服务器的地址
+      data: {
+        id:id,
+        apptimeId:apptimeId,
+        doctorId: doctorId
+      },
+      method: 'GET',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (req) {
+        console.log(req.data)
+        that.setData({
+          timeList:req.data
+        })
+      }
+    })
   },
 
   /**

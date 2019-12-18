@@ -1,7 +1,4 @@
 <!--pages/h_report/h_report.wxml-->
-<text>pages/h_report/h_report.wxml</text>
-
-
 <view >
     <view class="flex-column" style="display:flex;flex-direction: column;border-bottom:2px dashed gray;border-top:2px solid gray;" >
         <view class="flex-view-item" style="color:gray; display:flex;flex-direction: row;width:300px; letter-spacing:3rpx;margin:8px;">       

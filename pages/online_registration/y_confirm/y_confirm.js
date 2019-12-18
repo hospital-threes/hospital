@@ -85,12 +85,12 @@ Page({
         if (res.confirm) {
           console.log('再次预约')
           wx.reLaunch({
-            url: '/pages/online_registration/y_time/y_time'//调回预约页面（支付失败弹出模态框---预加载）
+            url: '/pages/online_registration/online_registration'//调回预约页面（支付失败弹出模态框---预加载）
           })
         } else if (res.cancel) {
           console.log('不预约了')
           wx.reLaunch({
-            url: '/pages/online_registration/y_time/y_time'//调回预约页面（支付失败弹出模态框---预加载）
+            url: '/pages/online_registration/online_registration'//调回预约页面（支付失败弹出模态框---预加载）
           })
         }
       }

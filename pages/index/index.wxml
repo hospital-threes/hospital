@@ -63,11 +63,9 @@
      <text>就诊指南</text>
   </view>
   <view class="pic">
-  <block wx:for="{{list}}" wx:fot-item="item">
    <image src="../../images/index_images/h_navigation.png"
    bindtap="tiaozhuanyemian" data-yemiancode="h_navigation" mode="as"></image>
      <text>来院导航</text>
-  </block>
   </view>
   
   
