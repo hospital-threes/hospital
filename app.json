@@ -27,12 +27,16 @@
 
     "pages/h_navigation/h_navigation", 
     
-
+    
     "pages/h_dynamics/h_dynamics",
     "pages/h_dynamics/h_dynamics_zi/h_dynamics_zi",
     
     "pages/personal_center/personal_center",
-    "pages/personal_center/personal_login/personal_login"
+    "pages/personal_center/personal_login/personal_login",
+    "pages/personal_center/addinformation/addinformation",
+    "pages/personal_center/management/management",
+    "pages/personal_center/updateinformation/updateinformation"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

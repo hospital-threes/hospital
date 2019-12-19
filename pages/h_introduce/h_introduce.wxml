@@ -9,11 +9,9 @@
       {{item.articleInfo}}
       </text>
     </view>
-
     <view class="zitu">
       <image src="../../images/1.png"></image>
     </view>
   </block>
-  
 </view>
 

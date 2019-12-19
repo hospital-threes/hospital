@@ -1,0 +1,23 @@
+
+<view class = "item" wx:for="{{list}}" wx:for-index="index"   bindtap="toCleanOrder" data-index="{{index}}" data-id="{{item.id}}" >
+  <image src ="{{item.image}}"  mode = "widthFix"/>
+  <view class = "info">
+    <text>就诊人姓名 {{item.patientName}}</text>
+    <text>手机号：{{item.patientTel}}</text>
+    <text>就诊卡号：{{item.patientHealthcarecardnumber}}</text>
+    <text>家庭所在地区：{{item.patientArea}}</text>
+    <text>家庭详细地址：{{item.patientAddress}}</text>
+  </view>
+  <view class = "modify" bindtap="toModifyAddre" data-index="{{index}}" data-id="{{item.id}}">
+    <image src = "/images/modify.png" mode = "widthFix" bindtap = "detete"/>
+  </view>
+</view>
+
+
+
+<view class = "add" bindtap = "addAddre">
+	<image  class = "left"src = "/images/add.png"
+    mode = "widthFix" /><view class = "text">新增就诊人</view>
+    <image class="right" src = "/images/right.png"
+    mode = "widthFix" />
+</view>

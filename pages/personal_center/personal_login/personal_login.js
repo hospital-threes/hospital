@@ -114,10 +114,18 @@ Page({
             var app = getApp()
             app.globalData.userId = data.data.userId
 
-            //登录成功跳转到页面
-            wx.redirectTo ({
-              url: '/pages/' + yemiancode + '/' + yemiancode + '?hospitalId=1',
-            })
+
+            if(yemiancode == ''){
+              wx.switchTab({
+                url: '/pages/personal_center/personal_center',
+              })
+            }else{
+              //登录成功跳转到页面
+              wx.redirectTo({
+                url: '/pages/' + yemiancode + '/' + yemiancode,
+              })
+            }
+            
             
           } else {
             wx.showToast({
@@ -126,13 +134,8 @@ Page({
               duration: 2000
             })
           }
-
         }
-
       })
-
     }
-
   }
-
 })

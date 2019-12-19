@@ -1,24 +1,16 @@
-
 <view class='help'>
-  <view class='help_item'>
-    <view class='title' data-index='1' catchtap='panel'>
-      <view class='title_1'>便签小程序使用免费吗</view>
-      <view class='title_2'><image src="../../images/{{showIndex == 1 ? 'up':'down'}}.png"></image></view>
+  <view class='help_item'  wx:for="{{list}}" wx:fot-item="item">
+    <view class='title' data-index='{{item.id}}' catchtap='panel'>
+      <view class='title_1'>{{item.secondDepartmentName}}</view>
+      <view class='title_2'><image src="../../images/{{showIndex == item.id ? 'up':'down'}}.png"></image></view>
     </view>
-    <view class='detail' wx:if="{{showIndex == 1}}">便签小程序是一款免费应用，并承诺永不收费1</view>
-  </view>
-  <view class='help_item'>
-    <view class='title' data-index='2' catchtap='panel'>
-      <view class='title_1'>便签小程序使用免费吗</view>
-      <view class='title_2'><image src="../../images/{{showIndex == 2 ? 'up':'down'}}.png"></image></view>
+    <view class='detail' wx:if="{{showIndex == item.id}}">
+    <text>
+    {{item.secondDepartmentCommont}}
+   </text>
+      <button class='aaa' size="mini" style="width:330rpx;height:54rpx;font-size:26rpx;margin-left: 0rpx;letter-spacing: 4rpx"  data-yemiancode="online_registration" mode="as"> 预约挂号\n</button>
+      <button class='ccc' size="mini" style="width:30rpx;height:54rpx;font-size:25rpx;margin-left: 0rpx;letter-spacing: 6rpx"></button>
+      <button class='bbb' size="mini" style="width:330rpx;height:54rpx;font-size:26rpx;margin-right: 0rpx;letter-spacing: 4rpx">查查看科室专家</button>
     </view>
-    <view class='detail' wx:if="{{showIndex == 2}}">便签小程序是一款免费应用，并承诺永不收费2</view>
-  </view>
-  <view class='help_item'>
-    <view class='title' data-index='3' catchtap='panel'>
-      <view class='title_1'>便签小程序使用免费吗</view>
-      <view class='title_2'><image src="../../images/{{showIndex == 3 ? 'up':'down'}}.png"></image></view>
-    </view>
-    <view class='detail' wx:if="{{showIndex == 3}}">便签小程序是一款免费应用，并承诺永不收费3</view>
   </view>
 </view>
