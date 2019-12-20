@@ -9,15 +9,13 @@
     <text>家庭详细地址：{{item.patientAddress}}</text>
   </view>
   <view class = "modify" bindtap="toModifyAddre" data-index="{{index}}" data-id="{{item.id}}">
-    <image src = "/images/modify.png" mode = "widthFix" bindtap = "detete"/>
+    <image src = "/images/my_images/modify.png" mode = "widthFix" bindtap = "detete"/>
   </view>
 </view>
 
-
-
 <view class = "add" bindtap = "addAddre">
-	<image  class = "left"src = "/images/add.png"
+	<image  class = "left"src = "/images/my_images/add.png"
     mode = "widthFix" /><view class = "text">新增就诊人</view>
-    <image class="right" src = "/images/right.png"
+    <image class="right" src = "/images/my_images/right.png"
     mode = "widthFix" />
 </view>

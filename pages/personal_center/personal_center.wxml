@@ -1,96 +1,118 @@
 <!--pages/personal_center/personal_center.wxml-->
-<form reportSubmit bindsubmit="submitFormId">
-  <view class="header">
-    <view class="user" hoverClass="none">
-      <view class="user_box">
-        <view catchtap="previewImage" class="logo">
-          <image src="../../images/my_images/default_userImg.jpg"></image>
-          <view class="cu-tag badge {{male==1?'icon-male bg-blue':'icon-female bg-pink'}}"></view>
+
+<view class="header">
+  <view class="user" hoverClass="none">
+    <view class="user_box">
+      <view catchtap="previewImage" class="logo">
+        <image src="../../images/my_images/default_userImg.jpg"></image>
+        <view class="cu-tag badge {{male==1?'icon-male bg-blue':'icon-female bg-pink'}}"></view>
+      </view>
+      <view class='patientInfo'>
+        <view>
+          <text>{{patientName}}</text>
         </view>
         <view>
-          <view>
-           <text>{{patientName}}</text>
-          </view>
-          <view>
-           <text>{{patientTel}}</text>
-          </view>
+          <text>{{patientTel}}</text>
         </view>
-      
       </view>
     </view>
   </view>
-  <!-- 功能列表 -->
-  <view class="nav">
-    <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
-      <view class='wallet'>
+  <view>
+    <navigator url="/pages/personal_center/management/management">
+      <image src="../../images/my_images/tip.png" class='patientInfo_image'></image>
+    </navigator>
+  </view>
+</view>
+<!-- 功能列表 -->
+<view class="nav">
+  <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
+    <view class='wallet'>
+      <view class='text_left'>
         <text class='icon-news icon'></text>
         <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
         <text>待支付订单</text>
+      </view>
+      <view>
         <image src="../../images/my_images/tip.png"></image>
       </view>
-      <view class="icon">
-        <text class='icon-right'></text>
-      </view>
     </view>
-    <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
-      <view class='wallet'>
+    <view class="icon">
+      <text class='icon-right'></text>
+    </view>
+  </view>
+  <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
+    <view class='wallet'>
+      <view class='text_left'>
         <text class='icon-news icon'></text>
         <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
         <text>在线咨询订单</text>
       </view>
-      <view class="icon">
-        <text class='icon-right'></text>
+      <view>
+        <image src="../../images/my_images/tip.png"></image>
       </view>
     </view>
-    <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
-      <view class='wallet'>
+    <view class="icon">
+      <text class='icon-right'></text>
+    </view>
+  </view>
+  <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
+    <view class='wallet'>
+      <view class='text_left'>
         <text class='icon-news icon'></text>
         <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
         <text>预约挂号订单</text>
       </view>
-      <view class="icon">
-        <text class='icon-right'></text>
+      <view>
+        <image src="../../images/my_images/tip.png"></image>
       </view>
     </view>
-    <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
-      <view class='wallet'>
+    <view class="icon">
+      <text class='icon-right'></text>
+    </view>
+  </view>
+  <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
+    <view class='wallet'>
+      <view class='text_left'>
         <text class='icon-news icon'></text>
         <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
         <text>门诊缴费订单</text>
       </view>
-      <view class="icon">
-        <text class='icon-right'></text>
+      <view>
+        <image src="../../images/my_images/tip.png"></image>
       </view>
     </view>
-    <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
-      <view class='wallet'>
+    <view class="icon">
+      <text class='icon-right'></text>
+    </view>
+  </view>
+  <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
+    <view class='wallet'>
+      <view class='text_left'>
         <text class='icon-news icon'></text>
         <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
         <text>就诊卡充值订单</text>
       </view>
-      <view class="icon">
-        <text class='icon-right'></text>
+      <view>
+        <image src="../../images/my_images/tip.png"></image>
       </view>
     </view>
-    <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
-      <view class='wallet'>
+    <view class="icon">
+      <text class='icon-right'></text>
+    </view>
+  </view>
+  <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
+    <view class='wallet'>
+      <view class='text_left'>
         <text class='icon-news icon'></text>
         <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
         <text>报告单查询</text>
       </view>
-      <view class="icon">
-        <text class='icon-right'></text>
+      <view>
+        <image src="../../images/my_images/tip.png"></image>
       </view>
     </view>
-    <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
-      <view class='wallet'>
-        <text class='icon-news icon'></text>
-        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
-        <text>管理就诊人</text>
-      </view>
-      <view class="icon">
-        <text class='icon-right'></text>
-      </view>
+    <view class="icon">
+      <text class='icon-right'></text>
     </view>
   </view>
-</form>
+</view>

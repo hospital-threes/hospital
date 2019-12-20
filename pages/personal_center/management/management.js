@@ -16,7 +16,6 @@ addAddre:function(e){
   },
   //修改就诊人默认状态
 toModifyAddre:function(e){
- 
   wx.navigateTo({
     url: '../updateinformation/updateinformation?id=' + e.currentTarget.dataset.id
   })
@@ -30,19 +29,18 @@ toCleanOrder:function(e){
  
   for(var i = 0;i<li.length;i++){
     if(i==e.currentTarget.dataset.index){
-      li[e.currentTarget.dataset.index].image = "/images/check.png"
+      li[e.currentTarget.dataset.index].image = "/images/my_images/check.png"
       that.setData({
         uncheckId: li[e.currentTarget.dataset.index].id
       })
       }
   else{
-      li[i].image = "/images/uncheck.png"
+      li[i].image = "/images/my_images/uncheck.png"
   }
 }
   wx.request({
-    url: 'http://localhost:8080/user/updateIsDefault',
+    url: 'http://localhost:8081/personalCenter/updateIsDefault',
     data: {
-
       'checkId': that.data.checkId,
       'uncheckId': that.data.uncheckId
     },
@@ -62,25 +60,25 @@ toCleanOrder:function(e){
 
   onLoad: function(options) {
 
-    var userInfo = getApp().globalData.userInfo;
+    var userId = getApp().globalData.userId;
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/user/getPatientList',
+      url: 'http://localhost:8081/personalCenter/selectPatient',
       data: {
-        'userId': userInfo.id,
+        'userId': userId,
       },
       success(res) {
-          var patient=res.data;
+        var patient=res.data;
         console.log(res.data)
         for (var i = 0; i < patient.length; i++) {
-          if (patient[i].isDefault==1) {
-            patient[i].image = "/images/check.png"
+          if (patient[i].isDefault==0) {
+            patient[i].image = "/images/my_images/check.png"
             that.setData({
               checkId: patient[i].id
             })
           }
           else {
-            patient[i].image = "/images/uncheck.png"
+            patient[i].image = "/images/my_images/uncheck.png"
           }
         }
 

@@ -1,4 +1,5 @@
 var index = 0;
+var app = getApp();
 Page({
   data:{
   
@@ -22,25 +23,18 @@ Page({
     var warn ="";
     var that = this;
     var flag = false;
-    // if(e.detail.value.name==""){
-    //   warn = "请填写您的姓名！";
-    // }else if(e.detail.value.tel==""){
-    //   warn = "请填写您的手机号！";
-    // }else if(!(/^1(3|4|5|7|8)\d{9}$/.test(e.detail.value.tel))){
-    //   warn = "手机号格式不正确";
-    // }else if(e.detail.value.addre=='0'){
-    //   warn = "请选择您的所在区域";
-    // }else if(e.detail.value.door==""){
-    //   warn = "请输入您的具体地址";
-    // }else if(e.detail.value.area=='0'){
-    //   warn = "请输入您的房屋面积";
-    // }else{
+    
       flag=true;
       console.log('form发生了submit事件，携带数据为：', e.detail.value)
 
-      var userInfo = getApp().globalData.userInfo;
+    var userId = app.globalData.userId;
+    var patientInfo = app.globalData.patientInfo;
+    var isDefault = 1;
+    if (patientInfo == null){
+      isDefault = 0;
+    }
     wx.request({
-      url: 'http://localhost:8080/user/addPatient',
+      url: 'http://localhost:8081/personalCenter/addPatient',
       data: {
         patientAddress: e.detail.value.patientAddress,
         patientArea: e.detail.value.patientArea,
@@ -49,8 +43,8 @@ Page({
         patientMedicalcardnumber: e.detail.value.patientMedicalcardnumber,
         patientName: e.detail.value.patientName,
         patientTel: e.detail.value.patientTel,
-        userId: userInfo.id
-       
+        userId: userId,
+        isDefault:isDefault
       },
       success(res) {
         if(res.data==true){

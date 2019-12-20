@@ -5,6 +5,7 @@ page {
 }
 
 .header {
+  display: flex;
   padding: 0 25rpx;
   padding-top: 40rpx;
   padding-bottom: 50rpx;
@@ -17,6 +18,7 @@ page {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 .header .gif-wave{
   position: absolute;
@@ -89,6 +91,18 @@ page {
   margin-top: 12rpx;
   font-size: 27rpx;
   color: #fff;
+}
+
+.patientInfo{
+  width: 380rpx;
+  margin-left:60rpx;
+}
+.patientInfo_image{
+  height: 145rpx;
+  width: 100rpx;
+}
+.text_left{
+  width: 630rpx;
 }
 
 .info {

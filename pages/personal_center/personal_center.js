@@ -18,8 +18,6 @@ Page({
   onLoad: function (options) {
     //判断用户登录信息
     var userId = app.globalData.userId;
-    var patientInfo = app.globalData.patientInfo;
-
     var that = this;
     
     if (userId == null) {
@@ -35,7 +33,7 @@ Page({
         },
         success: function (data) {
 
-          patientInfo  = data.data;
+          app.globalData.patientInfo = data.data;
           
           that.setData({
             patientName: data.data.patientName,
@@ -47,8 +45,7 @@ Page({
   },
 
   onReady: function () {
-
-
+    
   },
   openPage: function (a) {
     
