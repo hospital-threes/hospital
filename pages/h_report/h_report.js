@@ -12,7 +12,7 @@ Page({
   houduanRequest: function () {
     var that = this;
     wx.request({
-      url: 'http://localhost:8081/seclectReport?id=14',//自己请求的服务器的地址
+      url: 'http://localhost:8081/hospitalReport/seclectReport?id=14',//自己请求的服务器的地址
       method: 'GET',
       header: {
         'content-type': 'application/json' // 默认值
@@ -30,7 +30,7 @@ Page({
   jiuzenren: function () {
     var that = this;
     wx.request({
-      url: 'http://localhost:8081/JiuzenPerson?id=14',//自己请求的服务器的地址
+      url: 'http://localhost:8081/hospitalReport/JiuzenPerson?id=14',//自己请求的服务器的地址
       method: 'GET',
       header: {
         'content-type': 'application/json' // 默认值
