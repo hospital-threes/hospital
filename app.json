@@ -35,8 +35,13 @@
     "pages/personal_center/personal_login/personal_login",
     "pages/personal_center/addinformation/addinformation",
     "pages/personal_center/management/management",
-    "pages/personal_center/updateinformation/updateinformation"
-
+    "pages/personal_center/updateinformation/updateinformation",
+    "pages/personal_center/online_consultation_order/online_consultation_order",
+    "pages/personal_center/online_consultation_order/onlineorderdetail/onlineorderdetail",
+    "pages/personal_center/online_consultation_order/payonlineorder/payonlineorder",
+    "pages/personal_center/online_registration_order/online_registration_order",
+    "pages/personal_center/recharge_medical_card_order/recharge_medical_card_order",
+    "pages/personal_center/outpatient_payment_order/outpatient_payment_order"
   ],
   "window": {
     "backgroundTextStyle": "light",

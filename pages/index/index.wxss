@@ -15,8 +15,8 @@ swiper{
 }
 .base-info{
   color: #000;
-  font-size: 29rpx;
-  padding-top: 20rpx;
+  font-size: 24rpx;
+  padding: 20rpx 20rpx 20rpx 50rpx;
  
 }
 .ding{
@@ -41,4 +41,8 @@ swiper{
   margin-top: 0rpx;
   height: 125rpx;
   width: 100%;
+}
+.pic text{
+  color: #000;
+  font-size: 24rpx;
 }

@@ -14,7 +14,7 @@
   <block wx:for="{{list}}" wx:fot-item="item">
     <view class="base-info">
       <text>{{item.hospitalName}}
-          门诊时间：上午8：00~11：30，下午13：30~17：00
+          门诊时间：8：00~11：30，13：30~17：00
           医院地址：{{item.hospitalAddress}}
           服务热线：{{item.hospitalTel}}（8：00-17：00双休节假日除外）</text> 
     </view>

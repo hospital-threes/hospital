@@ -1,0 +1,45 @@
+
+.vv1{
+    color:#797979;
+    font-size: 30rpx;
+    display: inline-block;
+    margin-left: 30rpx;
+    
+}
+.vv2{
+    font-size: 30rpx;
+    display: inline-block;
+    margin-left: 30rpx;
+    
+}
+.vv1 view{
+    margin-top:30rpx;
+}
+.vv2 view{
+    margin-top:30rpx;
+}
+.v1{
+    
+    margin-left: 100rpx;
+    margin-top: 50rpx;
+}
+.t1{
+    color: coral;
+    font-size: 30rpx;
+    margin-left: 30rpx;
+}
+.t2{
+    color: rgb(67, 133, 231);
+}
+.t3{
+    margin: 30rpx;
+    font-size: 27rpx;
+    color: rgb(141, 139, 139);
+}
+.btn1 {
+    width: 90%;
+    height: 90rpx;
+    margin-top: 50rpx;
+    background-color: #00CCCC;
+    color: white;
+  }
