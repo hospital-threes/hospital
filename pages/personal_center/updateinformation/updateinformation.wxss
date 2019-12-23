@@ -37,6 +37,21 @@ button{
 .save{
   background-color: #09bb07;
   color:#fff;
+  width:330rpx;
+  height:54rpx;
+  font-size:26rpx;
+  margin-left: 15rpx;
+  letter-spacing: 4rpx;
+}
+.delete{
+  background-color: #c72741;
+  color:#fff;
+  width:330rpx;
+  height:54rpx;
+  font-size:26rpx;
+  margin-left: 15rpx;
+  margin-right: 0rpx;
+  letter-spacing: 4rpx;
 }
 .right{
   padding-left: 30rpx;

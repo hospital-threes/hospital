@@ -9,9 +9,9 @@ Page({
     var that=this
     //根据id查询就诊人信息
     wx.request({
-      url: 'http://localhost:8080/user/getPatientById',
+      url: 'http://localhost:8081/personalCenter/selectHuixiapatient',
       data: {
-        'id': options.id,
+        'patientid': options.id,
       },
       success(res) {
         that.setData({
@@ -39,15 +39,17 @@ Page({
   //点击删除就诊人
   delete: function () {
     var that = this;
+    
+
     wx.showModal({
       title: '提示',
       content: '确认删除该就诊人吗？',
       success: function (res) {
         if (res.confirm) {
           wx.request({
-            url: 'http://localhost:8080/user/deletePatient',
+            url: 'http://localhost:8081/personalCenter/deletePatient',
             data: {
-              'id': that.data.id,
+              'patientid': that.data.id,
             },
             success(res) {
               wx.navigateBack({
@@ -68,7 +70,7 @@ Page({
     console.log(this.data.id)
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/user/updatePatient',
+      url: 'http://localhost:8081/personalCenter/updatePatient',
       
       data: {
         'id': this.data.id,
@@ -89,13 +91,5 @@ Page({
         }
       }
     })
-  },
-  //取消修改
-  cancel: function () {
-    wx.navigateBack({
-      delta: 1
-    })
-
-  },
-
+  }
 })
