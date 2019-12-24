@@ -25,7 +25,7 @@
 </view>
 <!-- 功能列表 -->
 <view class="nav">
-  <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
+  <view bindtap="openPage" class="item">
     <view class='wallet'>
       <view class='text_left'>
         <text class='icon-news icon'></text>
@@ -40,7 +40,7 @@
       <text class='icon-right'></text>
     </view>
   </view>
-  <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
+  <view bindtap="openPage" class="item">
     <view class='wallet'>
       <view class='text_left'>
         <text class='icon-news icon'></text>
@@ -55,7 +55,7 @@
       <text class='icon-right'></text>
     </view>
   </view>
-  <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
+  <view bindtap="openPage" class="item">
     <view class='wallet'>
       <view class='text_left'>
         <text class='icon-news icon'></text>
@@ -70,7 +70,7 @@
       <text class='icon-right'></text>
     </view>
   </view>
-  <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
+  <view bindtap="openPage" class="item">
     <view class='wallet'>
       <view class='text_left'>
         <text class='icon-news icon'></text>
@@ -85,7 +85,7 @@
       <text class='icon-right'></text>
     </view>
   </view>
-  <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
+  <view bindtap="openPage" class="item">
     <view class='wallet'>
       <view class='text_left'>
         <text class='icon-news icon'></text>
@@ -100,19 +100,21 @@
       <text class='icon-right'></text>
     </view>
   </view>
-  <view bindtap="openPage" class="item" data-url="/pages/my_course/my_course" formType="submit" hoverClass="none">
-    <view class='wallet'>
-      <view class='text_left'>
-        <text class='icon-news icon'></text>
-        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
-        <text>报告单查询</text>
+  <navigator url="/pages/h_report/h_report">
+    <view bindtap="openPage" class="item">
+      <view class='wallet'>
+        <view class='text_left'>
+          <text class='icon-news icon'></text>
+          <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+          <text>报告单查询</text>
+        </view>
+        <view>
+          <image src="../../images/my_images/tip.png"></image>
+        </view>
       </view>
-      <view>
-        <image src="../../images/my_images/tip.png"></image>
+      <view class="icon">
+        <text class='icon-right'></text>
       </view>
     </view>
-    <view class="icon">
-      <text class='icon-right'></text>
-    </view>
-  </view>
+  </navigator>
 </view>

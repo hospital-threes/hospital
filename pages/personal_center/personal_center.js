@@ -4,11 +4,11 @@ var app = getApp();
 Page({
   data: {
     defaultAvatarUrl: "/images/my_images/default_avatar.png",
-    patientName:'',
+    patientName: '',
     patientTel: '',
     presentCount: 0,
     practiceday: '',
-   
+
     practicetime: "",
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
@@ -19,28 +19,18 @@ Page({
     //判断用户登录信息
     var userId = app.globalData.userId;
     var that = this;
-    
+
     if (userId == null) {
-      wx.navigateTo({
+      wx.redirectTo({
         url: '/pages/personal_center/personal_login/personal_login?yemiancode=personal_center',
       })
     } else {
-      wx.request({
-        url: 'http://localhost:8081/personalCenter/getDefaultPatient?userId='+userId,
-        method: 'post',
-        header: {
-          'content-type': 'application/getDefaultPatient' // 默认值
-        },
-        success: function (data) {
-
-          app.globalData.patientInfo = data.data;
-          
-          that.setData({
-            patientName: data.data.patientName,
-            patientTel: data.data.patientTel
-          })
-        }
+      var patientInfo = app.globalData.patientInfo
+      that.setData({
+        patientName: patientInfo.patientName,
+        patientTel: patientInfo.patientTel
       })
+
     }
   },
   onShow() { //返回显示页面状态函数
@@ -50,19 +40,19 @@ Page({
     //只执行获取地址的方法，来进行局部刷新
   },
   onReady: function () {
-    
+
   },
   openPage: function (a) {
-    
+
   },
   chooseGeren: function () {
-    
+
   },
   changeView: function () {
-    
+
   },
   sign_in: function () {
-    
+
   },
   onPullDownRefresh() {
 
@@ -71,6 +61,6 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function (res) {
-    
+
   }
 })

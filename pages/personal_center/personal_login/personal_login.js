@@ -102,7 +102,6 @@ Page({
           'content-type': 'application/SelectNews' // 默认值
         },
         success: function(data) {
-          console.log(data.data);
           if (data.data.result == 'success') {
             wx.showToast({
               title: '登录成功',
@@ -113,9 +112,9 @@ Page({
             //将数据存放到全局变量中
             var app = getApp()
             app.globalData.userId = data.data.userId
+            app.globalData.patientInfo = JSON.parse(data.data.patientInfo)
 
-
-            if(yemiancode == ''){
+            if (yemiancode == 'personal_center'){
               wx.switchTab({
                 url: '/pages/personal_center/personal_center',
               })
@@ -137,5 +136,13 @@ Page({
         }
       })
     }
-  }
+  },
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+    wx.switchTab({
+      url: '/pages/index/index',
+    })
+  },
 })
