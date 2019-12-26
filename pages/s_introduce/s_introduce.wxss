@@ -10,7 +10,7 @@
   font-size: 30rpx;
   height: 60rpx;
   line-height: 60rpx;
-  background: #e2e2e2;
+  background: #0000;
   display: flex;
 }
 .help .help_item .title .title_1 {

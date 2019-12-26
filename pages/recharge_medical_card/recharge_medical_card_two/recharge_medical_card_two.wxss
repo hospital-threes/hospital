@@ -1,0 +1,43 @@
+/* pages/index10/index10.wxss */
+.body{
+  font-size: 26rpx;
+}
+
+.recharge_ok{
+  margin-top: 100rpx;
+  text-align: center;
+  font-family: "黑体";
+    font-size: 45rpx;
+}
+.head_module {
+  width: 90%;
+  margin: 50rpx 40rpx 30rpx 40rpx;
+  padding-bottom: 10rpx;
+  /* text-decoration: underline; */
+  border-bottom: 1px dashed #ccc;
+}
+
+
+.head_name {
+
+  margin-left: 125rpx;
+}
+
+.head_ID {
+  margin-left: 100rpx;
+}
+
+.head_balance {
+  color: red;
+  margin-left: 95rpx;
+}
+
+.head_money {
+  margin-left:120rpx;
+}
+.one_down{
+   font-size: 30rpx;
+  color: white;
+  width: 80%;
+  background-color: #00CCCC;
+}
