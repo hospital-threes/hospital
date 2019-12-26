@@ -1,0 +1,68 @@
+/* pages/personal_center/personal_login/personal_login.wxss */
+
+page {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+/*登录图片*/
+
+.login-icon {
+  flex: none;
+}
+
+.login-img {
+  width: 750rpx;
+  height: 650rpx;
+}
+
+/* 这是文本的样式 */
+text{
+  font-size: 40rpx;
+  display: flex;
+  justify-content: center;
+}
+
+input{
+  border: 2rpx solid  #adc2d6;
+  height: 90rpx;
+  border-radius: 12rpx;
+  padding-left: 16rpx;
+}
+.phone_number{
+  margin: 16rpx 0;
+}
+
+.code{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 16rpx;
+}
+
+/* 验证码输入框样式 */
+
+.code_number{
+  flex: 1;
+}
+
+.btn_code{
+  background-color: #4ecfcf;
+  margin-left: 16rpx;
+  color: white;
+  font-size: 32rpx;
+}
+
+/* 登陆按钮样式 */
+.btn_login{
+  background-color:#09bb07; 
+  color: white;
+}

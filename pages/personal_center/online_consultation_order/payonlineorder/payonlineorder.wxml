@@ -1,0 +1,17 @@
+
+<view class="v1">
+    <view class="vv1">
+        <view>订单号\t{{result.orderNum}}</view>
+        <view>订单状态\t待支付</view>
+        <view>订单名称\t在线咨询</view>
+        <view>咨询时间\t{{result.payStartTime}}</view>
+        <view>医生姓名\t{{result.name}}</view>
+        <view>订单金额\t{{result.price}}</view>  
+    </view>
+</view>
+
+<view >
+<button class='btn1' bindtap='zhifu'>
+    <view>马上支付</view>
+ </button>
+</view>

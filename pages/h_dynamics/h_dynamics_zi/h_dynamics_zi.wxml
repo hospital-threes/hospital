@@ -1,0 +1,18 @@
+<!--pages/hdynamicszi/hdynamicszi.wxml-->
+<view>
+  <view class="suy">
+    <text>{{articleTitle}}</text>
+  </view>
+  <block wx:for="{{list}}" wx:fot-item="item">
+    <view class="luoc">
+      <text>
+      {{item.articleInfo}}
+      </text>
+    </view>
+
+    <view class="zitu">
+      <image src="../../../images/1.png"></image>
+    </view>
+  </block>
+  
+</view>

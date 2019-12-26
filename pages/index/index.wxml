@@ -1,0 +1,72 @@
+<view class="container">
+    <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+               <image src="{{item}}" class="slide-image" width="355" height="150"/>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+
+<view class="movie-info">
+  <block wx:for="{{list}}" wx:fot-item="item">
+    <view class="base-info">
+      <text>{{item.hospitalName}}
+          门诊时间：8：00~11：30，13：30~17：00
+          医院地址：{{item.hospitalAddress}}
+          服务热线：{{item.hospitalTel}}（8：00-17：00双休节假日除外）</text> 
+    </view>
+  </block>
+</view>
+<view class="ding">
+  <view class="pic">
+    <image src="../../images/index_images/online_registration.png" 
+      bindtap="tiaozhuanyemian" data-yemiancode="online_registration" mode="as">
+    </image>
+    <text>预约挂号 </text>
+  </view>
+   <view class="pic">
+   <image src="../../images/index_images/online_consultation.png" 
+   bindtap="tiaozhuanyemian" data-yemiancode="online_consultation" mode="as"></image>
+     <text>在线咨询</text>
+  </view>
+  <view class="pic">
+   <image src="../../images/index_images/h_report.png"
+   bindtap="tiaozhuanyemian" data-yemiancode="h_report" mode="as"></image>
+     <text>检查报告</text>
+  </view>
+  <view class="pic">
+   <image src="../../images/index_images/recharge_medical_card.png"
+   bindtap="tiaozhuanyemian" data-yemiancode="recharge_medical_card" mode="as"></image>
+     <text>就诊卡充值</text>
+  </view>
+  <view class="pic">
+   <image src="../../images/index_images/outpatient_payment.png"
+   bindtap="tiaozhuanyemian" data-yemiancode="outpatient_payment" mode="as"></image>
+     <text>门诊缴费</text>
+  </view>
+  <view class="pic">
+   <image src="../../images/index_images/h_introduce.png" 
+   bindtap="tiaozhuanyemian" data-yemiancode="h_introduce"mode="as"></image>
+     <text>医院介绍</text>
+  </view>
+  <view class="pic">
+   <image src="../../images/index_images/s_introduce.png"
+   bindtap="tiaozhuanyemian" data-yemiancode="s_introduce" mode="as"></image>
+     <text>科室介绍</text>
+  </view>
+  <view class="pic">
+   <image src="../../images/index_images/treatment_guide.png"
+   bindtap="tiaozhuanyemian" data-yemiancode="treatment_guide" mode="as"></image>
+     <text>就诊指南</text>
+  </view>
+  <view class="pic">
+   <image src="../../images/index_images/h_navigation.png"
+   bindtap="tiaozhuanyemian" data-yemiancode="h_navigation" mode="as"></image>
+     <text>来院导航</text>
+  </view>
+  
+  
+</view>

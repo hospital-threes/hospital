@@ -1,0 +1,44 @@
+<!--pages/jianchaXianging/jianchaXianging.wxml-->
+
+<!-- <view>
+ <view>
+  <navigator url="/pages/type_add/type_add" hover-class="navigator-hover">添加支出类型信息</navigator>
+ </view>
+ <view>
+ </view> -->
+ <view>
+ <view>
+   <view style=" font-size: 26rpx;">检查内容：{{personX.examineInfo}} </view>
+  <view>
+   <view class="table">
+    <view class="tr">
+     <view class="td">姓名：{{personX.patientName}} </view>
+     <view class="td">就诊科室：{{personX.secondDepartmentName}} {{personX.secondDepartmentAddress}}  </view>
+    </view>
+    <view class="tr">
+     <view class="td">采样时间：{{personX.sampleTime}} </view>
+     <view class="td">样本类型：{{personX.sampleType}} </view>
+    </view>
+   </view>
+   <text>\n</text>
+  </view>
+<view class="table">
+    <view  class="tr thead">
+     <view class="td">名称</view>
+     <view class="td">结果</view>
+     <view class="td ">参考值</view>
+    </view>
+   
+<block  wx:for="{{fileaddr}}"   wx:for-item="item" >
+   <view class="tr" >
+     <view class="td">{{item.name}}</view>
+     <view class="td">{{item.jiehuo}}</view>
+     <view class="td">{{item.cankaozhi}}</view>
+   </view>
+ </block>
+
+
+
+   </view>
+ </view>
+</view>

@@ -1,0 +1,45 @@
+
+
+
+
+<!-- 就诊卡模块 -->
+<view class='body'>
+  <view bindtap="add_patient" class="add_patient">
+
+  </view>
+  <!-- 就诊人 -->
+  <view class="head_module">
+    姓名：
+    <text class='head_name'>{{list[0].patientName}}</text>
+  </view>
+
+
+  <!--就诊卡号 -->
+  <view class="head_module">
+    就诊卡号:
+    <text class='head_ID'>{{list[0].patientMedicalcardnumber}}</text>
+  </view>
+
+  <!-- 就诊卡余额 -->
+  <view class="head_module">
+    就诊卡余额:
+    <text class='head_balance'>￥<text>{{list[0].medicalcardBalance}}</text></text>
+  </view>
+  <!--充值金额 -->
+  <view class="head_module">
+    充值金额:
+    <text class='head_money'>￥</text>
+    <input class='money_input' maxlength='6' type="number" bindinput="inputedit" placeholder="请需要要充值的金额" value="{{money}}"></input>
+  </view>
+
+  <!-- money自选择 -->
+  <view class="diy_money">
+    <view class='hundred' bindtap="money_update" id="100">100</view>
+    <view class='hundred' bindtap="money_update" id="200">200</view>
+    <view class='hundred' bindtap="money_update" id="300">300</view>
+    <view class='hundred' bindtap="money_update" id="500">500</view>
+    <view class='hundred' bindtap="money_update" id="1000">1000</view>
+    <view class='hundred' bindtap="money_update" id="3000">3000</view>
+  </view>
+  <button type="button" bindtap="one_down" class="one_down">下一步</button>
+</view>

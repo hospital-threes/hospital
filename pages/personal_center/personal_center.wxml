@@ -1,0 +1,122 @@
+<!--pages/personal_center/personal_center.wxml-->
+
+<view class="header">
+  <view class="user" hoverClass="none">
+    <view class="user_box">
+      <view catchtap="previewImage" class="logo">
+        <image src="../../images/my_images/default_userImg.jpg"></image>
+        <view class="cu-tag badge {{male==1?'icon-male bg-blue':'icon-female bg-pink'}}"></view>
+      </view>
+      <view class='patientInfo'>
+        <view>
+          <text>{{patientName}}</text>
+        </view>
+        <view>
+          <text>{{patientTel}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <navigator url="/pages/personal_center/management/management">
+      <image src="../../images/my_images/tip.png" class='patientInfo_image'></image>
+    </navigator>
+  </view>
+</view>
+<!-- 功能列表 -->
+<view class="nav">
+<navigator url="/pages/personal_center/unpaid_order/unpaid_order">
+  <view bindtap="openPage" class="item">
+    <view class='wallet'>
+      <view class='text_left'>
+        <text class='icon-news icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>待支付订单</text>
+      </view>
+      <view>
+        <image src="../../images/my_images/tip.png"></image>
+      </view>
+    </view>
+    <view class="icon">
+      <text class='icon-right'></text>
+    </view>
+  </view>
+   </navigator>
+  <view bindtap="openPage" class="item">
+    <view class='wallet'>
+      <view class='text_left'>
+        <text class='icon-news icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>在线咨询订单</text>
+      </view>
+      <view>
+        <image src="../../images/my_images/tip.png"></image>
+      </view>
+    </view>
+    <view class="icon">
+      <text class='icon-right'></text>
+    </view>
+  </view>
+  <view bindtap="openPage" class="item">
+    <view class='wallet'>
+      <view class='text_left'>
+        <text class='icon-news icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>预约挂号订单</text>
+      </view>
+      <view>
+        <image src="../../images/my_images/tip.png"></image>
+      </view>
+    </view>
+    <view class="icon">
+      <text class='icon-right'></text>
+    </view>
+  </view>
+  <view bindtap="openPage" class="item">
+    <view class='wallet'>
+      <view class='text_left'>
+        <text class='icon-news icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>门诊缴费订单</text>
+      </view>
+      <view>
+        <image src="../../images/my_images/tip.png"></image>
+      </view>
+    </view>
+    <view class="icon">
+      <text class='icon-right'></text>
+    </view>
+  </view>
+  <view bindtap="openPage" class="item">
+    <view class='wallet'>
+      <view class='text_left'>
+        <text class='icon-news icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>就诊卡充值订单</text>
+      </view>
+      <view>
+        <image src="../../images/my_images/tip.png"></image>
+      </view>
+    </view>
+    <view class="icon">
+      <text class='icon-right'></text>
+    </view>
+  </view>
+  <navigator url="/pages/h_report/h_report">
+    <view bindtap="openPage" class="item">
+      <view class='wallet'>
+        <view class='text_left'>
+          <text class='icon-news icon'></text>
+          <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+          <text>报告单查询</text>
+        </view>
+        <view>
+          <image src="../../images/my_images/tip.png"></image>
+        </view>
+      </view>
+      <view class="icon">
+        <text class='icon-right'></text>
+      </view>
+    </view>
+  </navigator>
+</view>

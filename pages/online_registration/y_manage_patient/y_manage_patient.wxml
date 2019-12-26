@@ -1,0 +1,15 @@
+<!--pages/y_manage_patient/y_manage_patient.wxml-->
+<view class="v1">
+
+<view class="v2">
+ 温馨提示：最多只能添加5个就诊人
+</view>
+<text>\n</text>
+<text>\n</text>
+<view>
+<button class="buttonstyle"  bindTap='gotoPageyuyue1'>
+ +添加就诊人
+</button>
+</view>
+
+</view>

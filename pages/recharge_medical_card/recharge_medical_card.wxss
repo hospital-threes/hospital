@@ -1,0 +1,80 @@
+.body {
+  font-size: 26rpx;
+}
+
+.head_module {
+  width: 90%;
+  margin: 50rpx 40rpx 30rpx 40rpx;
+  padding-bottom: 10rpx;
+  /* text-decoration: underline; */
+  border-bottom: 1px dashed #ccc;
+}
+
+.head_name {
+  margin-left: 150rpx;
+}
+
+.head_ID {
+  margin-left: 115rpx;
+}
+
+.head_balance {
+  color: red;
+  margin-left: 85rpx;
+}
+
+.head_money {
+  margin-left: 110rpx;
+}
+
+.money_write {
+  width: 150rpx;
+}
+
+.money_input {
+  margin-left: 100rpx;
+  float: right;
+  height: 50rpx;
+  position: relative;
+  right: 140rpx;
+  top: -5rpx;
+}
+
+.diy_money {
+  width: 80%;
+  height: 300rpx;
+  position: relative;
+  margin: 0 auto;
+}
+
+.hundred {
+  text-align: center;
+  line-height: 80rpx;
+  width: 130rpx;
+  height: 80rpx;
+  border: 1px solid #ff791f;
+  border-radius: 10rpx;
+  float: left;
+  margin: 30rpx 30rpx 30rpx 30rpx;
+}
+
+.one_down {
+  color: white;
+  width: 80%;
+  font-size: 30rpx;
+  background-color: #0cc;
+}
+
+.ccc {
+  height: 300rpx;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.add_patient {
+  float: right;
+  margin-right: 40rpx;
+  font-size: 40rpx;
+  position: relative;
+  top: -10rpx;
+}

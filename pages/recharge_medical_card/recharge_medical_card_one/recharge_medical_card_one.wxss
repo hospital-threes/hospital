@@ -1,0 +1,46 @@
+
+.body {
+  font-size: 26rpx;
+}
+
+.head_module {
+  width: 90%;
+  margin: 50rpx 40rpx 30rpx 40rpx;
+  padding-bottom: 10rpx;
+  /* text-decoration: underline; */
+  border-bottom: 1px dashed #ccc;
+}
+
+
+.order_number {
+
+  margin-left: 105rpx;
+}
+
+.order_name {
+  margin-left: 100rpx;
+}
+
+.head_money {
+  color: red;
+  margin-left: 95rpx;
+}
+.middle{
+  margin: 0 auto;
+  background-color: #F2F2F2;
+  /* width: 90%; */
+  height: 15rpx;
+}
+.payment_way{
+  font-size: 30rpx;
+  padding:50rpx 30rpx 30rpx 40rpx;
+}
+.radio{
+  margin-top:-10rpx;
+}
+.one_down{
+   font-size: 30rpx;
+  color: white;
+  width: 80%;
+  background-color: #00CCCC;
+}

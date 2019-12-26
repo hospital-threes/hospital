@@ -1,0 +1,49 @@
+/* pages/order/onlineanswer/onlineanswer.wxss */
+ .swiper-tab{  
+    width: 100%;  
+    border-bottom: 2rpx solid #777777;  
+    text-align: center;  
+    line-height: 80rpx;}  
+.swiper-tab-list{  font-size: 30rpx;  
+    display: inline-block;  
+    width: 33.33%;  
+    color: #777777;  
+}  
+.on{ color: #da7c0c;  
+    border-bottom: 5rpx solid #da7c0c;}  
+  
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }  
+.swiper-box view{  
+    text-align: center;  
+} 
+.cart-list-box{
+  background:#FFFFFF;
+  font-size:13px;
+ 
+}
+.list-info{
+   display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  margin:10rpx;
+}
+.list-info text {
+  word-break: keep-all;
+  word-wrap: break-word;
+  text-align: left;
+  overflow-wrap: break-word;
+  width: 93%;
+}
+.line {
+  margin-top: 20rpx;
+  height: 3px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+/*右侧尖括号*/  
+.tree_image_right{
+    position: absolute;
+    right: 15rpx;
+    width: 50rpx; 
+    height: 50rpx;
+}

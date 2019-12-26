@@ -1,0 +1,16 @@
+<!--pages/personal_center/personal_login/personal_login.wxml-->
+<view class="container"> 
+ <view class="login-icon"> 
+  <image class="login-img" src="/images/login_images/login_beijing.jpg"></image> 
+ </view> 
+   <text>欢迎登陆微信医院</text>
+   <input type="number" class="phone_number" bindinput="phoneInput" placeholder="请输入手机号码"></input>
+   <view class="code">
+      <input class="code_number" bindinput="pCodeInput" placeholder="请输入验证码"></input>
+      <button bindtap = "getpCode" disabled="{{smsCodeDisabled}}" style="background-color:{{getSmsCodeBtnColor}}"   
+      class="btn_code">{{getSmsCodeBtnTxt}}</button>
+   </view>
+   <view>
+    <button class="btn_login" bindtap="login">下一步</button>
+   </view>
+</view>

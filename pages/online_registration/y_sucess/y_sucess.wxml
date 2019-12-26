@@ -1,0 +1,17 @@
+<!--pages/y_sucess/y_sucess.wxml-->
+
+<view class="v1">
+  <view class="sucess">恭喜您，预约成功</view>
+  <text>\n</text>
+  <view class="neirong">
+  温馨提示：请注意查收预约短信，并按短信提示内容准时到我院支付挂号费，同时取号就诊
+  </view>
+
+</view>
+<text>\n</text>
+<text>\n</text>
+<view >
+<button class="buttonstyle"  bindTap='gotoyuXiangqin'>
+  查看预约详情
+</button>
+</view>

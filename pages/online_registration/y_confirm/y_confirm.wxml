@@ -1,0 +1,38 @@
+<view class="v1" >
+    <view class="orange" >
+    请在X分钟内完成支付，否则预约订单将自动取消
+    </view>
+
+    <view class="v2" style="border-top:1px solid  black;">订单号：<text class="gray">111</text></view>
+    <view class="v2">订单名称：<text class="gray">1111</text></view>
+    <view class="v3">订单金额：<text class="red">￥1111</text></view>
+   
+      
+  
+<!--遍历 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+ <view class="v4">选择支付方式</view>
+     <view>
+     <view>
+           <radio-group   style="margin-left:10px;">
+                <radio  class="radio"   bindchange="radioChange"  wx:for-items="{{zhifus}}" 
+               wx:key="name"  value="{{item.name}}"  checked = "{{item.checked}}">
+               <!--遍历支付方式 -->
+                    <view style="width:200px;">{{item.name}}</view>
+                </radio>
+            </radio-group>
+     </view>
+</view>
+
+
+</view>
+
+<text>\n</text>
+<text>\n</text>
+
+<view >
+<button class="buttonstyle"  bindtap='yuyuesucessafter'>
+  支付
+</button>
+
+
+</view>

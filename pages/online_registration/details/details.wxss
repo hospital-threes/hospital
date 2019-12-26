@@ -1,0 +1,218 @@
+#tx{
+   height: 115rpx;
+  width: 160rpx;
+}
+.xq{
+  height: 140rpx
+}
+.tt{
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+.page{
+  margin-top: 10rpx;
+  width: 307px
+}
+.address{
+  margin-left: 70rpx;
+  border-bottom: 1px solid whitesmoke;
+  line-height: 70rpx;
+}
+
+
+/* 列表 */
+.list{
+  
+  background: white;
+  margin-bottom: 1px;
+   border-bottom: 1px solid whitesmoke;
+  /* border-top: 1px solid whitesmoke;  */
+}
+.user-content-view{
+  display: -webkit-box;  /*关键属性（必须有的）  */
+  -webkit-box-orient: vertical;   /*规定子元素的排列方向 */
+  -webkit-line-clamp:3; /*行数*/
+  /* 实现多余的文字隐藏并用省略号来代表被隐藏的文字    */
+  overflow: hidden;
+  text-overflow:ellipsis; 
+  
+}
+.user-content{
+  /* display: flex; */
+  font-size: 18px;
+  /* line-height: 50rpx;
+  margin-left: 10rpx;
+ */
+}
+
+/* 展开 收起 */
+.state{
+  width: 96%;
+  text-align: right;
+  color: rgb(88, 103, 138);
+  margin: 10rpx 0rpx; 
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.hide{
+  display: -webkit-box;
+}
+
+.show{
+  display: block
+} 
+
+
+
+/* pages/orderTime/index.wxss */
+
+.scroll-view_H{
+  padding: 20rpx 0rpx;
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap;
+}
+scroll-view .listItem{
+  text-align: center;
+  width: 186rpx;
+  height: 128rpx;
+  background-color:white;
+  padding-top: 30rpx;
+  box-sizing: border-box;
+  /* float: left; */
+  display: inline-block;
+}
+scroll-view .listItem text{
+  display: block;
+}
+scroll-view .listItem .name{
+  font-size: 21rpx;
+}
+scroll-view .listItem .date{
+  font-size: 21rpx;
+}
+scroll-view .current{
+  background-color: #00CCCC;
+
+}
+scroll-view .current text{
+  color: #fff;
+}
+.time{
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+.time .listItem{
+  width: 25%;
+  height: 135rpx;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding-top: 35rpx;
+  border: 1px solid #b9c1c8;
+}
+.time .listItem text{
+  display: block;
+  font-size: 21rpx;
+}
+.time .current{
+  border: 1px solid #76aef8;
+}
+.time .current text{
+  color: #76aef8;
+}
+.operate button{
+  width:300rpx;
+  height: 88rpx;
+  background-color: #fff;
+}
+.operate .del{
+  
+   color: #e54449; 
+}
+.operate button::after{
+  border: 2px solid #e54449;
+}
+.operate{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.operate button:nth-child(2):after{
+  border: 2px solid #e54449;
+}
+.operate .save{
+  color: #fff;
+  background-color: #e54449; 
+  
+}
+.operate{
+  width: 100%;
+  padding: 30rpx 0;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+}
+
+.isRuleShow{
+  display: block;
+}
+.isRuleHide{
+  display: none;
+}
+.ruleZhezhao{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color:rgba(0, 0, 0, .5); 
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.ruleZhezhaoContent{
+  padding: 40rpx 0;
+  width: 80%;
+  background: #fff;
+  margin: 40% auto;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.ruleHide{
+  height: 60rpx!important;
+  width: 60rpx!important;
+  position: absolute;
+  top: -20rpx;
+  right: -20rpx;
+  z-index: 10000;
+}
+.rule{
+  display: block;
+  border: 1px solid #fff;
+  width: 100rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #fff;
+  height: 60rpx;
+  font-size: 30rpx;
+  border-radius: 30rpx;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+.select{
+  width: 520rpx;
+  height: 110rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rxp;
+}
