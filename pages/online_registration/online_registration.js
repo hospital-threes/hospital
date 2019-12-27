@@ -27,8 +27,7 @@ Page({
       },
       success: function (req) {
         console.log(req.data)
-    
-
+        
         that.setData({
             pp:req.data,
         })

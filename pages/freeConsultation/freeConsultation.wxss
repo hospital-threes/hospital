@@ -1,0 +1,16 @@
+/* pages/freeConsultation/freeConsultation.wxss */
+
+.button {
+  vertical-align: middle;
+}
+
+.custom-icon {
+  color: #1989fa;
+}
+
+
+
+.van-button{
+  width:100%
+}
+

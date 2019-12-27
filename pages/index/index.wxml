@@ -29,7 +29,7 @@
   </view>
    <view class="pic">
    <image src="../../images/index_images/online_consultation.png" 
-   bindtap="tiaozhuanyemian" data-yemiancode="online_consultation" mode="as"></image>
+   bindtap="tiaozhuanyemian" data-yemiancode="online_registration" mode="as"></image>
      <text>在线咨询</text>
   </view>
   <view class="pic">

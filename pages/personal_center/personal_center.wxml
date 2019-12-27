@@ -25,6 +25,7 @@
 </view>
 <!-- 功能列表 -->
 <view class="nav">
+<navigator url="/pages/personal_center/unpaid_order/unpaid_order">
   <view bindtap="openPage" class="item">
     <view class='wallet'>
       <view class='text_left'>
@@ -40,6 +41,7 @@
       <text class='icon-right'></text>
     </view>
   </view>
+   </navigator>
   <view bindtap="openPage" class="item">
     <view class='wallet'>
       <view class='text_left'>

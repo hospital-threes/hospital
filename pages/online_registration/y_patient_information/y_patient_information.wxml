@@ -1,11 +1,9 @@
-<!--pages/y_patient_information/y_patient_information.wxml-->
-
 <view class="v1">
-    <view class="v2" style="border-top:1px solid  black;">医院信息：<text class="gray">{{hospital}}</text></view>
+    <view class="v2" style="border-top:1px solid  black;">医院信息：<text class="gray">{{hospitalName}}</text></view>
     <view class="v2">预约信息：<text class="gray">{{timeList.yuyuetime1}}{{timeList.week}}{{timeList.yuyuetime}}</text></view>
     <view class="v2">预约医生：<text class="gray">{{timeList.doctorName}}</text></view>
-    <view class="v2" style="height:25px;">就诊人：<text class="jiu">张三</text>
-     <navigator  url="/pages/y_manage_patient/y_manage_patient"    hover-class="navigator-hover" style="position: relative;left:260px;top:-25px;">></navigator>
+    <view class="v2" style="height:25px;">就诊人：<text class="jiu">{{patientName.patientName}}</text>
+     <navigator  url="/pages/personal_center/management/management"    hover-class="navigator-hover" style="position: relative;left:260px;top:-25px;">></navigator>
     </view>
     <view class="v2">费用：<text class="red">￥{{price}}</text></view>
 
@@ -18,4 +16,5 @@
   立即预约
 </button>
 </view>
+
 

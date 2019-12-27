@@ -26,8 +26,8 @@ Page({
    */
     onLoad: function (options) {//动态获取参数
   
-      console.log(options.id + "*********************00000");
-      
+     
+
       
     this.setData({
       DataSource: [
@@ -42,12 +42,25 @@ Page({
       departmentName: options.deptname,
       //医生姓名
       doctorname: options.name,
+ 
+      picPath: options.picPath,
+
+      picName: options.picName,
+
+      ispremium: options.ispremium,
 
     
 
     
 //8888888888888888888888888888888888888888888888888888888888888888888888
-    })
+    });
+
+      wx.setStorageSync('departmentName', options.departmentName);
+      wx.setStorageSync('doctorname', options.name);
+      wx.setStorageSync('doctorid', options.id);
+      wx.setStorageSync('ispremium', options.ispremium);
+
+
       var app = getApp();
       app.globalData.doctorId = options.id;
 
@@ -56,7 +69,7 @@ Page({
     this.huoqutime(options);
     this.huoquadministrative(options);
     this.yuyue();
-      
+    this.select(e);
     
   },
   //获取预约状态
@@ -112,6 +125,7 @@ Page({
       },
       success: function (req) {
         that.setData({
+          
           doctorxq: req.data
 
         })
@@ -214,68 +228,125 @@ Page({
 
   },
   select: function (event) {
+    let index = event.currentTarget.dataset.index;
+    console.log(index);
     var that = this;
     //为上半部分的点击事件
     this.setData({
+      //下标
       currentIndex: event.currentTarget.dataset.index
     })
+    
     var id = event.currentTarget.dataset.id;
-    //查询预约状态
-    wx.request({
-      url: 'http://localhost:8081/doctor/huoqustutas',//自己请求的服务器的地址
-      data: {
-        id: id
-      },
-      method: 'GET',
-      header: {
-        'content-type': 'application/json;' // 默认值
-       
-      },
-      success: function (req) {
-        that.setData({
-          status: req.data
-        })
-        wx.request({
-          url: 'http://localhost:8081/doctor/huoquappointmenttime',//自己请求的服务器的地址
-          data: {
-            id: id
-          },
-          method: 'GET',
-          header: {
-            'content-type': 'application/json' // 默认值
-          },
-          success: function (req) {
-            console.log(req)
-            that.setData({
-              appointmenttime: req.data
-            })
-          }
-        })
-      }
-    })
+    //判断默认选中
+    if(id==null){
+        //默认选中第一个
+      console.log(id + "------777777777777777777777777");
+      //查询预约状态
+      wx.request({
+        url: 'http://localhost:8081/doctor/huoqustutas',//自己请求的服务器的地址
+        data: {
+          id: 1
+        },
+        method: 'GET',
+        header: {
+          'content-type': 'application/json;' // 默认值
 
-    //回调函数成功查询预约时间段
-    
+        },
+        success: function (req) {
+          that.setData({
+            status: req.data
+          })
+          wx.request({
+            url: 'http://localhost:8081/doctor/huoquappointmenttime',//自己请求的服务器的地址
+            data: {
+              id: id
+            },
+            method: 'GET',
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            success: function (req) {
+              console.log(req)
+              that.setData({
+                appointmenttime: req.data
+              })
+            }
+          })
+        }
+      })
 
-    
+    }else{
+      console.log(id + "------777777777777777777777777");
+      //查询预约状态
+      wx.request({
+        url: 'http://localhost:8081/doctor/huoqustutas',//自己请求的服务器的地址
+        data: {
+          id: id
+        },
+        method: 'GET',
+        header: {
+          'content-type': 'application/json;' // 默认值
+
+        },
+        success: function (req) {
+          that.setData({
+            status: req.data
+          })
+          wx.request({
+            url: 'http://localhost:8081/doctor/huoquappointmenttime',//自己请求的服务器的地址
+            data: {
+              id: id
+            },
+            method: 'GET',
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            success: function (req) {
+              console.log(req)
+              that.setData({
+                appointmenttime: req.data
+              })
+            }
+          })
+        }
+      })
+
+
+
+    }
+
+
+   
+
   },
   //打开规则提示
   showRule: function (e) {
     var that = this;
     var week = e.currentTarget.dataset.week;
-  
-    
+
+
 
     that.setData({
       isRuleTrue: true
     })
-    
+
   },
   //关闭规则提示
   hideRule: function () {
     this.setData({
       isRuleTrue: false
     })
+  },
+
+  inputHandle: function (options) {
+    var doctorname = wx.getStorageSync("doctorname");
+    var ispremium = wx.getStorageSync("ispremium");
+
+    console.log(doctorname+"&&&&&&&&&&&&$$$$$$$$$$$$$$$$$$$$$4");
+     wx.navigateTo({
+       url: '/pages/online_registration/freeConsultation/freeConsultation?doctorname=' + doctorname + '&&ispremium='+ispremium,
+  })
   },
   
 })

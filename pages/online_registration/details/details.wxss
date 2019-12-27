@@ -15,19 +15,21 @@
   width: 307px
 }
 .address{
-  margin-left: 70rpx;
-  border-bottom: 1px solid whitesmoke;
-  line-height: 70rpx;
+  padding-top: 10px;
+  border-bottom: 2px solid whitesmoke;
+  line-height: 50rpx;
+  padding-bottom: 10px;
 }
 
-
+.bu{
+   border-bottom: 2px solid whitesmoke;
+}
 /* 列表 */
 .list{
   
   background: white;
   margin-bottom: 1px;
-   border-bottom: 1px solid whitesmoke;
-  /* border-top: 1px solid whitesmoke;  */
+ 
 }
 .user-content-view{
   display: -webkit-box;  /*关键属性（必须有的）  */
@@ -215,4 +217,23 @@ scroll-view .current text{
   height: 110rpx;
   margin-top: 30rpx;
   margin-bottom: 30rxp;
+}
+image{  
+  /*被图片设置宽高*/  
+  width: 60px;  
+  height: 60px;  
+  margin-top: 15px;  
+  border-radius: 50%;
+}  
+.butstyle{
+  width: 240rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  color: white;
+  display:block;
+  margin-left: 60rpx;
+  margin-top: 20rpx;
+  background-color: #169bd5;
+  border-radius: 6rpx;
+  font-size: 32rpx;
 }

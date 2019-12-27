@@ -9,7 +9,10 @@
 .gray{
   color: #BBBBBB;
     padding-left: 20px;
+    font-size: 10px
 }
+
+
 
 .jiu{
    padding-left: 20px;

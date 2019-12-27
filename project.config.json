@@ -6,11 +6,12 @@
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
-		"nodeModules": false,
+		"nodeModules": true,
 		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
@@ -25,7 +26,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.4",
-	"appid": "wx59aaf1f87f6080ca",
+	"appid": "wxce22751ed875650a",
 	"projectname": "hospital",
 	"debugOptions": {
 		"hidedInDevtools": []

@@ -1,0 +1,34 @@
+<!--pages/successfulConsulting/successfulConsulting.wxml-->
+
+<view class="page">
+    <view class="weui-msg">
+        <view class="weui-msg__icon-area">
+            <icon type="success" size="64"></icon>
+        </view>
+        <view class="weui-msg__text-area">
+            <view class="weui-msg__title">问题提交成功</view>
+            <view class="weui-msg__desc" style="font-size:28rpx">医生会尽快给您回复，回复后您会收到短信提醒
+<br/><br/>
+
+
+您可进入【个人中心】->【在线咨询订单】列表查看您的所有已提交问题</view>
+        </view>
+        <view class="weui-msg__opr-area">
+            <view class="weui-btn-area">
+                <button class="weui-btn" type="primary" bindtap="inputHandle">返回</button>
+              
+            </view>
+        </view>
+        <view class="weui-msg__tips-area">
+            <view class="weui-msg__tips">点击返回按钮，返回医生详情页</view>
+        </view>
+        <view class="weui-msg__extra-area">
+            <view class="weui-footer">
+                <view class="weui-footer__links">
+                    <navigator url="" class="weui-footer__link">底部链接文本</navigator>
+                </view>
+                <view class="weui-footer__text">Copyright © 2008-2016 weui.io</view>
+            </view>
+        </view>
+    </view>
+</view>

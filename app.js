@@ -34,7 +34,7 @@ App({
     })
   },
   globalData: {
-    userId: null,
+    userId: 18,
     hospitalInfo: null,
     patientInfo:null,
     hospital: "上海交通大学医学院附属第九人民医院"

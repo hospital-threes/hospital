@@ -1,5 +1,15 @@
 {
+"usingComponents": {
+  "van-button": "vant-weapp/button",
+  "van-skeleton": "vant-weapp/skeleton",
+  "van-panel": "vant-weapp/panel",
+  "van-field": "vant-weapp/field",
+  "van-radio": "vant-weapp/radio",
+  "van-uploader": "vant-weapp/uploader"
+},
+
   "pages": [
+    
     "pages/index/index",
 
     "pages/online_registration/online_registration",
@@ -9,6 +19,18 @@
     "pages/online_registration/y_patient_information/y_patient_information",
     "pages/online_registration/y_sucess/y_sucess",
     "pages/online_registration/y_sucess_after/y_sucess_after",
+    "pages/online_registration/freeConsultation/freeConsultation",
+     "pages/online_registration/successfulConsulting/successfulConsulting",
+     "pages/online_registration/consultingPaid/consultingPaid",
+      "pages/online_registration/details/details",
+    
+
+     
+     
+    
+    
+
+    
 
     "pages/online_consultation/online_consultation",
     
@@ -36,6 +58,7 @@
     "pages/personal_center/addinformation/addinformation",
     "pages/personal_center/management/management",
     "pages/personal_center/updateinformation/updateinformation",
+    "pages/personal_center/unpaid_order/unpaid_order",
     "pages/personal_center/online_consultation_order/online_consultation_order",
     "pages/personal_center/online_consultation_order/onlineorderdetail/onlineorderdetail",
     "pages/personal_center/online_consultation_order/payonlineorder/payonlineorder",
