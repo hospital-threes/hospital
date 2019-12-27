@@ -8,9 +8,9 @@
     <text>
     {{item.secondDepartmentCommont}}
    </text>
-      <button class='aaa' size="mini" style="width:330rpx;height:54rpx;font-size:26rpx;margin-left: 0rpx;letter-spacing: 4rpx; background:#00CCCC"> 预约挂号\n</button>
+      <button class='aaa' size="mini" bindtap="goToMypage" style="width:330rpx;height:54rpx;font-size:26rpx;margin-left: 0rpx;letter-spacing: 4rpx; background:#00CCCC"> 预约挂号\n</button>
       <button class='ccc' size="mini" style="width:30rpx;height:54rpx;font-size:25rpx;margin-left: 0rpx;letter-spacing: 6rpx"></button>
-      <button class='bbb' size="mini" style="width:330rpx;height:54rpx;font-size:26rpx;margin-right: 0rpx;letter-spacing: 4rpx; background:#199ED8">查查看科室专家</button>
+      <button class='bbb' size="mini" bindtap="goToMypage" style="width:330rpx;height:54rpx;font-size:26rpx;margin-right: 0rpx;letter-spacing: 4rpx; background:#199ED8">查查看科室专家</button>
     </view>
   </view>
 </view>

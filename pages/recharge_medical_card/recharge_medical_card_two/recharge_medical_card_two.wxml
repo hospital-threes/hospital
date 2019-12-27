@@ -7,39 +7,39 @@
   <!-- 订单号 -->
   <view class="head_module">
     订单号
-    <text class='head_name'>2019050709821345</text>
+    <text class='head_name'>{{list.orderNum}}</text>
   </view>
   <!--订单名称 -->
   <view class="head_module">
-    就诊卡号
-    <text class='head_ID'>就诊卡充值</text>
+    订单名称
+    <text class='head_ID'>{{list.orderName}}</text>
   </view>
 
   <!-- 订单金额 -->
   <view class="head_module">
     订单金额
-    <text class='head_balance'>￥<text>{{price}}</text></text>
+    <text class='head_balance'>￥<text>{{list.payMoney}}</text></text>
   </view>
 
 
   <!--支付方式 -->
   <view class="head_module">
     支付方式
-    <text class='head_ID'>微信支付</text>
+    <text class='head_ID'>{{list.payWay}}</text>
   </view>
 
 
   <!--就诊卡号 -->
   <view class="head_module">
     就诊卡号
-    <text class='head_ID'>4353653265</text>
+    <text class='head_ID'>{{list.patientMedicalcardnumber}}</text>
   </view>
 
 
   <!--支付时间 -->
   <view class="head_module">
     支付时间
-    <text class='head_ID'>2019-05-07 19:21:10</text>
+    <text class='head_ID'>{{list.refundStartTime}}</text>
   </view>
    
 </view>

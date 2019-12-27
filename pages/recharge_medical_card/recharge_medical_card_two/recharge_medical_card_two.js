@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    price:''
+    id:''
   },
 
   /**
@@ -14,13 +14,31 @@ Page({
   onLoad: function (options) {
     var that = this;
     that.setData({
-      price: options.price,
+      id: options.oId,
     })
-    var ss = options.price
-    console.log(ss)
-    
+    var id = options.oId
+    this.selectone(id);
   },
+  selectone(id) {
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8081/rechargeMedicalCard/SelectIdOne?id=' + id,
+      method: 'post',
+      header: {
+        'content-type': 'application/id' // 默认值
+      },
+      success: function (res) {
+        var list = res.data;
+        if (list == null) {
 
+        } else {
+          that.setData({
+            list: list,
+          })
+        }
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -71,7 +89,7 @@ Page({
   },
   return_home: function () {
     // 要使用相对路径
-    wx.navigateTo({
+    wx.switchTab({
       url: '/pages/index/index'
     })
   }

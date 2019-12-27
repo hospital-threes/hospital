@@ -109,26 +109,24 @@ Page({
     var jzk = '就诊卡充值';
     var money = that.data.money;
     var status='0';
+    var id = that.data.id;
+    var disabled='0';
     wx.request({
       url: 'http://localhost:8081/rechargeMedicalCard/InsertOrder',
       data: {
-        orderName: jzk,
+        disabled: disabled,
+        orderName:jzk,
+        orderPlacer: id,
         status: status,
-        payMoney: money
+        payMoney: money,
+        
       },
       success: function (res) {
-        var money = that.data.money;
-        var patientMedical = that.data.patientMedical;
-        var jzk = '就诊卡充值';
-        var id = that.data.id;
-        var medicalcard = that.data.medicalcard
-        var id = that.data.list[0].id
-        if (parseInt(money) > 0) {
+        var id = res.data;
           // 要使用相对路径 
-          wx.navigateTo({
-            url: '/pages/recharge_medical_card/recharge_medical_card_one/recharge_medical_card_one?money=' + money + '&patientMedical=' + patientMedical + '&jzk=' + jzk + '&medicalcard=' + medicalcard + '&id=' + id,
-          })
-        }
+        wx.navigateTo({
+        url:'/pages/recharge_medical_card/recharge_medical_card_one/recharge_medical_card_one?id=' +id,
+        })
       }
     })
   },

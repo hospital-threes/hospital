@@ -44,5 +44,10 @@ Page({
         }
       }
     })
+  },
+  goToMypage: function (e) {
+    wx.navigateTo({
+      url: "../online_registration/online_registration"
+    })
   }
 })
